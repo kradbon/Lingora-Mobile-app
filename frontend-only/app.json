@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Lingora Frontend",
+    "slug": "lingora-frontend",
+    "scheme": "lingora",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android", "web"],
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.lingora.frontend"
+    }
+  }
+}
