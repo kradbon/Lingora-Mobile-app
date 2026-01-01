@@ -6,26 +6,90 @@ import { ActivityIndicator, View, Text } from 'react-native';
 import { useAuth } from '../context/AuthProvider';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
-import StudyScreen from '../screens/StudyScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import HomeScreen from '../screens/HomeScreen';
+import LessonsScreen from '../screens/LessonsScreen';
+import PracticeScreen from '../screens/PracticeScreen';
+import LeagueScreen from '../screens/LeagueScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import LessonScreen from '../screens/LessonScreen';
 import UnitScreen from '../screens/UnitScreen';
+import { colors } from '../theme';
+import Icon from '../components/Icon';
+import type { IconName } from '../components/Icon';
+import { useI18n } from '../i18n';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
+const TabIcon = ({ name, focused }: { name: IconName; focused: boolean }) => (
+  <View
+    style={{
+      width: 42,
+      height: 32,
+      borderRadius: 14,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: focused ? colors.card : 'transparent',
+      borderWidth: focused ? 1 : 0,
+      borderColor: focused ? colors.border : 'transparent',
+    }}
+  >
+    <Icon name={name} size={22} color={focused ? colors.primary : colors.muted} />
+  </View>
+);
+
 const AppTabs = () => (
-  <Tabs.Navigator>
-    <Tabs.Screen name="Study" component={StudyScreen} />
-    <Tabs.Screen name="Settings" component={SettingsScreen} />
+  <Tabs.Navigator
+    screenOptions={{
+      headerShown: false,
+      tabBarShowLabel: false,
+      tabBarStyle: {
+        backgroundColor: colors.bg1,
+        borderTopColor: colors.border,
+        height: 62,
+        paddingTop: 8,
+      },
+    }}
+  >
+    <Tabs.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{ tabBarIcon: ({ focused }) => <TabIcon name="home-variant-outline" focused={focused} /> }}
+    />
+    <Tabs.Screen
+      name="Lessons"
+      component={LessonsScreen}
+      options={{ tabBarIcon: ({ focused }) => <TabIcon name="book-open-outline" focused={focused} /> }}
+    />
+    <Tabs.Screen
+      name="Practice"
+      component={PracticeScreen}
+      options={{ tabBarIcon: ({ focused }) => <TabIcon name="target" focused={focused} /> }}
+    />
+    <Tabs.Screen
+      name="League"
+      component={LeagueScreen}
+      options={{ tabBarIcon: ({ focused }) => <TabIcon name="trophy-outline" focused={focused} /> }}
+    />
+    <Tabs.Screen
+      name="Profile"
+      component={ProfileScreen}
+      options={{ tabBarIcon: ({ focused }) => <TabIcon name="account-circle-outline" focused={focused} /> }}
+    />
   </Tabs.Navigator>
 );
 
-const LoadingScreen = () => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#0f141a' }}>
-    <ActivityIndicator size="large" color="#60a5fa" />
-    <Text style={{ color: '#e5e7eb', marginTop: 12 }}>Loading session...</Text>
-  </View>
-);
+const LoadingScreen = () => {
+  const { t } = useI18n();
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.bg1 }}>
+      <ActivityIndicator size="large" color={colors.primary} />
+      <Text style={{ color: colors.text, marginTop: 12, fontWeight: '700' }}>
+        {t('nav.loadingSession')}
+      </Text>
+    </View>
+  );
+};
 
 export default function NavRoot() {
   const { user, loading } = useAuth();
@@ -41,8 +105,9 @@ export default function NavRoot() {
   return (
     <NavigationContainer>
       {user ? (
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={AppTabs} options={{ headerShown: false }} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Main" component={AppTabs} />
+          <Stack.Screen name="Lesson" component={LessonScreen} />
           <Stack.Screen name="Unit" component={UnitScreen} />
         </Stack.Navigator>
       ) : (

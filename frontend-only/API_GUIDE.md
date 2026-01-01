@@ -2,43 +2,36 @@ API integration guide (for backend devs)
 ========================================
 
 Base URL
-- Use the backend base URL provided to you (e.g., `https://api.example.com`).
-- In the mobile app, the base URL is read from `EXPO_PUBLIC_API_BASE`. Set it before `npx expo start`, e.g.:
-  - PowerShell: `$env:EXPO_PUBLIC_API_BASE="https://api.example.com"`
-  - cmd: `set EXPO_PUBLIC_API_BASE=https://api.example.com`
-  - If unset, the app defaults to `http://10.0.2.2:8000` on Android emulator and `http://localhost:8000` on iOS/web.
+- In the mobile app, the base URL is read from `EXPO_PUBLIC_API_BASE` (recommended).
+  - PowerShell: `$env:EXPO_PUBLIC_API_BASE="http://192.168.1.10:8000"`
+  - cmd: `set EXPO_PUBLIC_API_BASE=http://192.168.1.10:8000`
+- If unset, the app tries to auto-detect the Expo dev server host and uses `http://<host>:8000`.
+- Final fallback: Android emulator -> `http://10.0.2.2:8000`, iOS/web -> `http://localhost:8000`.
 
 Endpoints (as used by the app)
-- POST `/auth/register` — body `{ name, email, password }`, returns `{ token, user }`.
-- POST `/auth/login-mobile` — body `{ email, password }`, returns `{ token, user }`.
-- GET `/auth/me` — returns current user `{ name, email, ... }`.
-- POST `/auth/logout` (optional) — to invalidate token if supported.
-- GET `/ping` — health check `{ ok: true, service: "lingora-api" }`.
+- POST `/auth/register` -> body `{ name, email, password }`, returns `{ token, user }`.
+- POST `/auth/login-mobile` -> body `{ email, password }`, returns `{ token, user }`.
+- GET `/auth/me` -> returns current user `{ id, name, email }`.
+- GET `/ping` -> health check `{ ok: true, service: "lingora-api" }`.
+- GET `/api/curriculum` -> curriculum sections + lessons.
+- GET `/api/units` -> list of quiz units.
+- GET `/api/units/{unit_id}` -> lesson + quiz payload (answers hidden).
+- POST `/api/units/{unit_id}/answer` -> `{ correct, progress }`.
+- GET `/api/progress` -> per-unit progress list.
 
 Auth details
 - Bearer token expected: `Authorization: Bearer <token>`.
 - The app stores the token in AsyncStorage under key `lingora_auth_token`.
-- Axios client attaches the token automatically on every request.
-- Rate limiting (if enabled): login endpoints often limited (e.g., 5/min/IP).
-
-Backend expectations for MayoAI/C# developer
-- Implement the above endpoints with JSON bodies and responses as shown.
-- On successful login/register, return `200` with JSON:
-  ```json
-  { "token": "<jwt-or-session-token>", "user": { "name": "Alice", "email": "alice@example.com" } }
-  ```
-- `GET /auth/me` should return the same user object (no token refresh expected).
-- CORS: allow the mobile origin; for local dev `*` is fine, otherwise specify the Expo dev URL or your domain.
-- Health: `GET /ping` should return status 200 with `{ "ok": true, "service": "lingora-api" }`.
+- Axios attaches the token automatically on every request.
 
 Error handling (expected by app)
 - On auth errors, return status 400/401 with a JSON `detail` field, e.g. `{ "detail": "Invalid credentials" }`.
-- Other errors: return JSON with a message in `detail` to surface in the UI.
+- Validation errors should return 422 with `detail` as an array (FastAPI default).
 
 Sample C# (HttpClient) call
 ```csharp
 var client = new HttpClient { BaseAddress = new Uri("https://api.example.com") };
-var payload = new { email = "admin@lingora.local", password = "secret" };
+var payload = new { email = "demo@example.com", password = "demo1234" };
 var resp = await client.PostAsJsonAsync("/auth/login-mobile", payload);
 resp.EnsureSuccessStatusCode();
 var data = await resp.Content.ReadFromJsonAsync<LoginResponse>();
@@ -47,11 +40,6 @@ client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bear
 Where `LoginResponse` is `{ public string token { get; set; } public User user { get; set; } }`.
 
 Expo/mobile notes
-- Expo SDK: 54; React Native: 0.76.3.
 - If you change the backend URL, restart Expo after setting `EXPO_PUBLIC_API_BASE`.
 - Network timeout in the app is 8s; slow/stuck requests will surface as errors.
-
-Checklist for backend dev
-- [ ] Implement endpoints above with the response shapes shown.
-- [ ] Enable CORS for the mobile/web origins.
-- [ ] Provide the final API base URL for the mobile app to use via `EXPO_PUBLIC_API_BASE`.
+- Offline mode bypasses the API and uses local content in the app bundle.

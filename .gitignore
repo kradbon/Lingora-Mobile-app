@@ -1,0 +1,34 @@
+# Node/Expo
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.expo/
+.expo-shared/
+
+# Android/Gradle
+**/build/
+**/.gradle/
+**/.cxx/
+**/.externalNativeBuild/
+**/.kotlin/
+local.properties
+*.apk
+*.aab
+*.keystore
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# IDE/OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*

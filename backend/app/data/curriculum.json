@@ -1,0 +1,242 @@
+{
+  "units": [
+    {
+      "id": "l01-html-intro",
+      "title": "Intro to HTML",
+      "description": "HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using elements represented by tags.",
+      "lessons": [
+        "l01-html-intro-q01",
+        "l01-html-intro-q02",
+        "l01-html-intro-q03",
+        "l01-html-intro-q04",
+        "l01-html-intro-q05",
+        "l01-html-intro-q06",
+        "l01-html-intro-q07",
+        "l01-html-intro-q08",
+        "l01-html-intro-q09",
+        "l01-html-intro-q10"
+      ]
+    },
+    {
+      "id": "l02-html-structure",
+      "title": "Basic Tags",
+      "description": "Headings are defined with <h1> to <h6>. Paragraphs use <p>. Line breaks use <br> (an empty tag).",
+      "lessons": [
+        "l02-html-structure-q01",
+        "l02-html-structure-q02",
+        "l02-html-structure-q03",
+        "l02-html-structure-q04",
+        "l02-html-structure-q05",
+        "l02-html-structure-q06",
+        "l02-html-structure-q07",
+        "l02-html-structure-q08",
+        "l02-html-structure-q09",
+        "l02-html-structure-q10"
+      ]
+    },
+    {
+      "id": "l03-formatting",
+      "title": "Text Formatting",
+      "description": "HTML provides tags to format text. <b> makes text bold, <i> makes it italic. <strong> and <em> convey semantic importance.",
+      "lessons": [
+        "l03-formatting-q01",
+        "l03-formatting-q02",
+        "l03-formatting-q03",
+        "l03-formatting-q04",
+        "l03-formatting-q05",
+        "l03-formatting-q06",
+        "l03-formatting-q07",
+        "l03-formatting-q08",
+        "l03-formatting-q09",
+        "l03-formatting-q10"
+      ]
+    },
+    {
+      "id": "l04-lists-links",
+      "title": "Lists & Links",
+      "description": "Lists organizes data. <ul> is unordered (bullets), <ol> is ordered (numbers). <a> creates hyperlinks.",
+      "lessons": [
+        "l04-lists-links-q01",
+        "l04-lists-links-q02",
+        "l04-lists-links-q03",
+        "l04-lists-links-q04",
+        "l04-lists-links-q05",
+        "l04-lists-links-q06",
+        "l04-lists-links-q07",
+        "l04-lists-links-q08",
+        "l04-lists-links-q09",
+        "l04-lists-links-q10"
+      ]
+    },
+    {
+      "id": "l05-media",
+      "title": "Images & Media",
+      "description": "Images are embedded with the <img> tag. It is empty and contains attributes only. \"src\" specifies the path, \"alt\" provides text for screen readers.",
+      "lessons": [
+        "l05-media-q01",
+        "l05-media-q02",
+        "l05-media-q03",
+        "l05-media-q04",
+        "l05-media-q05",
+        "l05-media-q06",
+        "l05-media-q07",
+        "l05-media-q08",
+        "l05-media-q09",
+        "l05-media-q10"
+      ]
+    },
+    {
+      "id": "l06-css-intro",
+      "title": "Intro to CSS",
+      "description": "CSS (Cascading Style Sheets) formats the layout of a webpage. You can control color, font, size, and spacing.",
+      "lessons": [
+        "l06-css-intro-q01",
+        "l06-css-intro-q02",
+        "l06-css-intro-q03",
+        "l06-css-intro-q04",
+        "l06-css-intro-q05",
+        "l06-css-intro-q06",
+        "l06-css-intro-q07",
+        "l06-css-intro-q08",
+        "l06-css-intro-q09",
+        "l06-css-intro-q10"
+      ]
+    },
+    {
+      "id": "l07-selectors",
+      "title": "CSS Selectors",
+      "description": "Selectors allow you to select and manipulate HTML elements. Common ones are Element, ID, and Class selectors.",
+      "lessons": [
+        "l07-selectors-q01",
+        "l07-selectors-q02",
+        "l07-selectors-q03",
+        "l07-selectors-q04",
+        "l07-selectors-q05",
+        "l07-selectors-q06",
+        "l07-selectors-q07",
+        "l07-selectors-q08",
+        "l07-selectors-q09",
+        "l07-selectors-q10"
+      ]
+    },
+    {
+      "id": "l08-box-model",
+      "title": "Box Model",
+      "description": "All HTML elements can be considered as boxes. The Box Model wraps content with Margins, Borders, Padding, and Content.",
+      "lessons": [
+        "l08-box-model-q01",
+        "l08-box-model-q02",
+        "l08-box-model-q03",
+        "l08-box-model-q04",
+        "l08-box-model-q05",
+        "l08-box-model-q06",
+        "l08-box-model-q07",
+        "l08-box-model-q08",
+        "l08-box-model-q09",
+        "l08-box-model-q10"
+      ]
+    },
+    {
+      "id": "l09-fonts",
+      "title": "Fonts & Text",
+      "description": "CSS offers powerful text styling. You can change the font family, size, weight, alignment, and decoration.",
+      "lessons": [
+        "l09-fonts-q01",
+        "l09-fonts-q02",
+        "l09-fonts-q03",
+        "l09-fonts-q04",
+        "l09-fonts-q05",
+        "l09-fonts-q06",
+        "l09-fonts-q07",
+        "l09-fonts-q08",
+        "l09-fonts-q09",
+        "l09-fonts-q10"
+      ]
+    },
+    {
+      "id": "l10-flexbox",
+      "title": "Flexbox",
+      "description": "Flexbox is a layout module used to arrange items in rows or columns without floats. It creates flexible responsive layouts.",
+      "lessons": [
+        "l10-flexbox-q01",
+        "l10-flexbox-q02",
+        "l10-flexbox-q03",
+        "l10-flexbox-q04",
+        "l10-flexbox-q05",
+        "l10-flexbox-q06",
+        "l10-flexbox-q07",
+        "l10-flexbox-q08",
+        "l10-flexbox-q09",
+        "l10-flexbox-q10"
+      ]
+    },
+    {
+      "id": "l11-grid",
+      "title": "CSS Grid",
+      "description": "CSS Grid Layout is a 2-dimensional system, handling both columns and rows. It is perfect for page-wide layouts.",
+      "lessons": [
+        "l11-grid-q01",
+        "l11-grid-q02",
+        "l11-grid-q03",
+        "l11-grid-q04",
+        "l11-grid-q05",
+        "l11-grid-q06",
+        "l11-grid-q07",
+        "l11-grid-q08",
+        "l11-grid-q09",
+        "l11-grid-q10"
+      ]
+    },
+    {
+      "id": "l12-responsive",
+      "title": "Responsive Design",
+      "description": "Responsive Web Design makes web pages render well on all devices. Media queries (@media) allow you to apply different styles for different screen sizes.",
+      "lessons": [
+        "l12-responsive-q01",
+        "l12-responsive-q02",
+        "l12-responsive-q03",
+        "l12-responsive-q04",
+        "l12-responsive-q05",
+        "l12-responsive-q06",
+        "l12-responsive-q07",
+        "l12-responsive-q08",
+        "l12-responsive-q09",
+        "l12-responsive-q10"
+      ]
+    },
+    {
+      "id": "l13-input-forms",
+      "title": "Advanced Forms",
+      "description": "Forms allow user input. <input> has many types like text, password, checkbox, radio, date. <select> makes dropdowns.",
+      "lessons": [
+        "l13-input-forms-q01",
+        "l13-input-forms-q02",
+        "l13-input-forms-q03",
+        "l13-input-forms-q04",
+        "l13-input-forms-q05",
+        "l13-input-forms-q06",
+        "l13-input-forms-q07",
+        "l13-input-forms-q08",
+        "l13-input-forms-q09",
+        "l13-input-forms-q10"
+      ]
+    },
+    {
+      "id": "l14-semantic",
+      "title": "Semantic HTML",
+      "description": "Semantic elements clearly describe their meaning to both the browser and the developer. Examples: <header>, <footer>, <article>, <section>.",
+      "lessons": [
+        "l14-semantic-q01",
+        "l14-semantic-q02",
+        "l14-semantic-q03",
+        "l14-semantic-q04",
+        "l14-semantic-q05",
+        "l14-semantic-q06",
+        "l14-semantic-q07",
+        "l14-semantic-q08",
+        "l14-semantic-q09",
+        "l14-semantic-q10"
+      ]
+    }
+  ]
+}

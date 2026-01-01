@@ -1,14 +1,24 @@
 {
   "expo": {
-    "name": "Lingora Frontend",
-    "slug": "lingora-frontend",
+    "name": "WebMaster",
+    "slug": "webmaster",
     "scheme": "lingora",
     "version": "1.0.0",
     "orientation": "portrait",
     "platforms": ["ios", "android", "web"],
     "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/images/lingora-icon.png",
+    "splash": {
+      "image": "./assets/images/lingora-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "android": {
-      "package": "com.lingora.frontend"
+      "package": "com.lingora.frontend",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/lingora-icon.png",
+        "backgroundColor": "#ffffff"
+      }
     }
   }
 }

@@ -1,0 +1,618 @@
+{
+  "u36-operators": {
+    "details": [
+      "Arithmetic operators include `+`, `-`, `*`, `/`, and `%`.",
+      "Assignment operators include `=`, `+=`, `-=`, and more.",
+      "Comparison operators include `==`, `===`, `!=`, `<`, `>`, and `<=>`.",
+      "`==` does type juggling; `===` compares both type and value.",
+      "Logical operators include `&&`, `||`, and `!` (short-circuit).",
+      "String concatenation uses `.` and `.=`.",
+      "Null coalescing `??` picks the first non-null value.",
+      "Use parentheses to make precedence clear.",
+      "Be careful comparing numeric strings; convert types intentionally.",
+      "Prefer strict comparisons in authentication and validation logic."
+    ],
+    "summary": [
+      "Use `===` for strict comparisons.",
+      "`==` can surprise due to type juggling.",
+      "Concatenate with `.`.",
+      "Logical operators short-circuit.",
+      "`??` provides defaults.",
+      "Use parentheses for clarity."
+    ]
+  },
+  "u37-constants": {
+    "details": [
+      "Constants are immutable values used for fixed options and limits.",
+      "Define global constants with `define('NAME', 'value')`.",
+      "Define constants with `const NAME = 'value';` at file or class scope.",
+      "Class constants are accessed as `ClassName::CONST`.",
+      "Magic constants like `__DIR__` and `__FILE__` give file paths.",
+      "Use constants for HTTP status codes, limits, and fixed options.",
+      "Prefer `__DIR__` over relative paths for includes and file I/O.",
+      "Avoid using constants for values that change per environment (use env/config).",
+      "In PHP 8.1+, enums are another option for fixed sets of values.",
+      "Use naming conventions (ALL_CAPS) for constants."
+    ],
+    "summary": [
+      "Constants do not change.",
+      "Use `define()` or `const`.",
+      "Class constants use `::`.",
+      "Use `__DIR__` for stable paths.",
+      "Constants are great for fixed values.",
+      "Use env/config for values that vary."
+    ]
+  },
+  "u38-types": {
+    "details": [
+      "Scalar type hints include `int`, `float`, `string`, and `bool`.",
+      "You can type-hint arrays (`array`) and callables (`callable`).",
+      "Use return types like `: int` for clearer APIs.",
+      "Nullable types use `?Type`.",
+      "Union types use `TypeA|TypeB` (PHP 8+).",
+      "`mixed` can represent any type (use sparingly).",
+      "`declare(strict_types=1)` enforces strict scalar typing in that file.",
+      "Without strict types, PHP may coerce values (e.g., '5' to 5).",
+      "Type errors are easier to debug than subtle bugs later.",
+      "Combine types with validation for user input."
+    ],
+    "summary": [
+      "Type hints clarify intent.",
+      "Use return types for functions/methods.",
+      "Nullable types use `?`.",
+      "Union types use `|`.",
+      "`strict_types` reduces coercion surprises.",
+      "Types plus validation make safer code."
+    ]
+  },
+  "u39-nullability": {
+    "details": [
+      "`null` represents 'no value'.",
+      "Use `??` to provide a default when a value is null or missing.",
+      "`??=` assigns a default only if the variable is null (PHP 7.4+).",
+      "Use `?->` to safely access properties/methods on a nullable object (PHP 8+).",
+      "Use `isset()` to check if a variable is set and not null.",
+      "Avoid deep nested `if` checks by using defaults and early returns.",
+      "Handle nulls explicitly at API boundaries (input validation).",
+      "Prefer clear models: sometimes empty values are better than null.",
+      "`match` can map values to results with strict comparisons.",
+      "Document when null is allowed in your function signatures."
+    ],
+    "summary": [
+      "`??` provides defaults.",
+      "`?->` avoids null dereference errors.",
+      "Use `isset()` to check null.",
+      "Handle nulls at boundaries.",
+      "`match` maps values strictly.",
+      "Document nullability in types."
+    ]
+  },
+  "u40-arrays-advanced": {
+    "details": [
+      "`array_map()` transforms each element.",
+      "`array_filter()` keeps elements that pass a test.",
+      "`array_reduce()` folds an array into a single value.",
+      "Arrow functions (`fn`) are handy for short callbacks.",
+      "`usort()` sorts with a custom comparison function.",
+      "`array_column()` extracts a field from an array of arrays.",
+      "`array_key_exists()` checks keys even if the value is null.",
+      "Prefer not to mutate arrays in-place unless necessary.",
+      "For large data, consider generators to avoid memory spikes.",
+      "Some functions reindex arrays; keep keys in mind."
+    ],
+    "summary": [
+      "Map/filter/reduce are powerful.",
+      "Use arrow functions for callbacks.",
+      "`usort()` enables custom sorting.",
+      "`array_column()` extracts fields.",
+      "Be careful with keys/reindexing.",
+      "Generators help with large data."
+    ]
+  },
+  "u41-closures": {
+    "details": [
+      "Closures are anonymous functions you can store in variables.",
+      "Closures can capture variables with `use ($x)`.",
+      "Arrow functions `fn($x) => ...` automatically capture from parent scope.",
+      "Closures are common callbacks for arrays and events.",
+      "Captured variables are copied by value (unless you use `&`).",
+      "Avoid capturing large objects unnecessarily.",
+      "Type-hint parameters and return values for clearer callbacks.",
+      "Closures can be passed to `array_map`, `array_filter`, and `usort`.",
+      "Keep closures short; extract named functions when they get complex.",
+      "Be careful with `$this` inside closures in class methods."
+    ],
+    "summary": [
+      "Closures are anonymous functions.",
+      "Capture variables with `use (...)`.",
+      "Arrow functions (`fn`) are concise.",
+      "Closures are great for callbacks.",
+      "Avoid over-capturing variables.",
+      "Use types to keep callbacks readable."
+    ]
+  },
+  "u42-generators": {
+    "details": [
+      "Generators return an iterable sequence using `yield`.",
+      "They compute values lazily, saving memory.",
+      "A generator can yield many values without building an array.",
+      "You can `yield $value` or `yield $key => $value`.",
+      "Generators work naturally with `foreach`.",
+      "Use generators for streaming files or large datasets.",
+      "A generator stops when it hits `return` or function end.",
+      "Avoid heavy side effects inside generators unless needed.",
+      "`yield from` can delegate to another iterable (PHP 7+).",
+      "Generators make iterators and pipelines easier to implement."
+    ],
+    "summary": [
+      "`yield` creates a generator.",
+      "Generators are lazy and memory-efficient.",
+      "Use with `foreach`.",
+      "Yield keys and values when helpful.",
+      "Great for large/streaming data.",
+      "`yield from` delegates iteration."
+    ]
+  },
+  "u43-error-logging": {
+    "details": [
+      "Use `error_reporting(E_ALL)` in development to surface issues.",
+      "In production, disable display and enable logging.",
+      "Set display/log behavior via php.ini or environment-specific config.",
+      "Use `error_log()` to write messages to logs.",
+      "Use exceptions to represent failures you can handle.",
+      "Catch and log exceptions at application boundaries.",
+      "Do not expose stack traces to users; return friendly errors.",
+      "Structured logging helps with monitoring and alerting.",
+      "Libraries like Monolog provide better logging features.",
+      "Log context (request id/user id) but avoid secrets."
+    ],
+    "summary": [
+      "Report errors in dev; log in prod.",
+      "Do not show stack traces to users.",
+      "Use exceptions and try/catch for handling.",
+      "Use `error_log()` or a logger for diagnostics.",
+      "Log context, not secrets.",
+      "Centralize error handling when possible."
+    ]
+  },
+  "u44-phpdoc": {
+    "details": [
+      "PHPDoc uses docblock comments starting with `/** ... */`.",
+      "Use `@param` and `@return` to document types and meanings.",
+      "Use `@throws` to document exceptions a function may throw.",
+      "Use `@var` to document variable types (especially arrays).",
+      "PHPDoc improves IDE autocomplete and code navigation.",
+      "Static analysis tools can read PHPDoc for stricter checks.",
+      "Document array shapes when it helps readability.",
+      "Keep PHPDoc aligned with actual code; outdated docs are harmful.",
+      "Prefer real type hints first; use PHPDoc to add detail.",
+      "Use docblocks for public APIs and complex logic."
+    ],
+    "summary": [
+      "PHPDoc documents code with `/** ... */`.",
+      "`@param` and `@return` describe function IO.",
+      "`@throws` documents exceptions.",
+      "Helps IDEs and static analysis tools.",
+      "Keep docs accurate.",
+      "Type hints first; PHPDoc adds detail."
+    ]
+  },
+  "u45-psr-style": {
+    "details": [
+      "PSR-12 is a widely used PHP coding style guide.",
+      "Consistent formatting improves readability and reduces diff noise.",
+      "Use tools like PHPCS or php-cs-fixer to enforce rules automatically.",
+      "Run format/lint tools in CI to keep style consistent.",
+      "Adopt a team standard and stick to it.",
+      "Use meaningful names and consistent casing.",
+      "Keep lines readable and wrap long expressions when needed.",
+      "Use namespaces and autoloading for project structure.",
+      "Separate concerns (controllers, services, repositories).",
+      "Style guides are about consistency, not personal preference."
+    ],
+    "summary": [
+      "PSR-12 is a common PHP style standard.",
+      "Use tools to enforce formatting.",
+      "Run style checks in CI.",
+      "Consistency makes code easier to maintain.",
+      "Good naming matters as much as formatting.",
+      "Structure code with namespaces and autoloading."
+    ]
+  },
+  "u46-config-env": {
+    "details": [
+      "Different environments (dev/stage/prod) need different config.",
+      "Use environment variables for secrets and environment-specific values.",
+      "Use `.env` locally, but do not commit it to version control.",
+      "Read env vars with `getenv()` or `$_ENV`.",
+      "Validate required config at startup and fail fast with clear errors.",
+      "Keep configuration centralized (one config module/file).",
+      "Do not log secrets (DB passwords, API keys).",
+      "Use sane defaults for optional config values.",
+      "Document required env vars in `.env.example`.",
+      "Prefer config injection over globals for testability."
+    ],
+    "summary": [
+      "Use env vars for environment-specific config.",
+      "Keep secrets out of git.",
+      "Validate config early.",
+      "Centralize configuration.",
+      "Document required variables.",
+      "Do not log secrets."
+    ]
+  },
+  "u47-routing": {
+    "details": [
+      "Routing maps a request path and method to a handler.",
+      "A front controller reads `$_SERVER['REQUEST_URI']` and dispatches.",
+      "Use `parse_url()` to extract the path safely.",
+      "Use a route table instead of long if/else chains.",
+      "Differentiate GET/POST/PUT/DELETE based on `REQUEST_METHOD`.",
+      "Separate routing from business logic (controllers/services).",
+      "Return correct status codes (404 for unknown routes).",
+      "Normalize paths (trailing slashes) to avoid duplicate routes.",
+      "Add middleware concepts (auth, logging) as apps grow.",
+      "Frameworks provide routing; building a simple router teaches the basics."
+    ],
+    "summary": [
+      "Routing maps URLs to code.",
+      "Use a front controller.",
+      "Parse path with `parse_url()`.",
+      "Handle method and path.",
+      "Return 404 for unknown routes.",
+      "Separate routing from business logic."
+    ]
+  },
+  "u48-templating": {
+    "details": [
+      "Templates render data into HTML (views).",
+      "Keep business logic out of templates where possible.",
+      "Escape user data with `htmlspecialchars()` to prevent XSS.",
+      "Use `ENT_QUOTES` and specify UTF-8 for correct escaping.",
+      "Prefer small templates and reusable partials.",
+      "Pass data into templates explicitly (avoid global state).",
+      "Avoid building HTML with string concatenation in controllers.",
+      "Consider a templating engine (Twig) for larger projects.",
+      "Do not echo raw user input.",
+      "Use Content Security Policy (CSP) in production for extra safety."
+    ],
+    "summary": [
+      "Templates render HTML.",
+      "Escape output with `htmlspecialchars()`.",
+      "Keep logic out of templates.",
+      "Use partials for reuse.",
+      "Never output raw user input.",
+      "Consider a template engine for large apps."
+    ]
+  },
+  "u49-validation": {
+    "details": [
+      "Validation ensures input matches expected types and formats.",
+      "`filter_var()` can validate email, URL, int, and more.",
+      "`filter_input()` reads and validates from `$_GET`/`$_POST`.",
+      "Sanitization is different from validation; validate first.",
+      "Return clear error messages and keep them consistent.",
+      "Validate server-side even if you also validate client-side.",
+      "Use allow-lists (allowed values) instead of deny-lists.",
+      "Normalize input (trim whitespace) before validating.",
+      "Do not trust hidden form fields; validate them too.",
+      "Keep validation logic close to input parsing."
+    ],
+    "summary": [
+      "Validate server-side.",
+      "Use `filter_var()`/`filter_input()` when helpful.",
+      "Normalize input before validation.",
+      "Use allow-lists for allowed values.",
+      "Return clear error messages.",
+      "Client-side validation is not enough."
+    ]
+  },
+  "u50-auth-sessions": {
+    "details": [
+      "Never store plaintext passwords; store hashes from `password_hash()`.",
+      "Verify passwords with `password_verify()`.",
+      "After login, regenerate session IDs to prevent fixation.",
+      "Store only a user ID (and maybe flags) in `$_SESSION`.",
+      "Protect session cookies with HttpOnly and Secure flags.",
+      "Implement logout by clearing session and destroying it.",
+      "Rate limit login attempts to slow brute force attacks.",
+      "Use HTTPS in production to protect session cookies in transit.",
+      "Add authorization checks (roles/permissions), not just authentication.",
+      "Log auth events carefully (avoid logging passwords or tokens)."
+    ],
+    "summary": [
+      "Hash passwords with `password_hash()`.",
+      "Verify with `password_verify()`.",
+      "Regenerate session ID after login.",
+      "Store minimal session data.",
+      "Rate limit login attempts.",
+      "Use HTTPS and secure cookie flags."
+    ]
+  },
+  "u51-jwt": {
+    "details": [
+      "JWT stands for JSON Web Token.",
+      "A JWT is typically `header.payload.signature` (base64url encoded).",
+      "Clients usually send JWTs in `Authorization: Bearer <token>`.",
+      "Servers must verify signature and check `exp` (expiration).",
+      "Do not store sensitive data in the payload; it is readable.",
+      "Use HTTPS so tokens are not intercepted.",
+      "Use libraries to create/verify JWTs; avoid writing crypto yourself.",
+      "Rotate secrets/keys and invalidate tokens when needed.",
+      "Consider short-lived access tokens plus refresh tokens.",
+      "JWT auth is common for APIs; sessions are common for web apps."
+    ],
+    "summary": [
+      "JWT is a token format for auth.",
+      "Send via `Authorization: Bearer`.",
+      "Verify signature and expiration.",
+      "Payload is readable; do not store secrets.",
+      "Use HTTPS.",
+      "Prefer libraries for JWT handling."
+    ]
+  },
+  "u52-cors": {
+    "details": [
+      "Browsers enforce the same-origin policy for XHR/fetch.",
+      "CORS lets a server allow specific origins to call it.",
+      "Set `Access-Control-Allow-Origin` to an allowed origin (not always `*`).",
+      "Preflight requests (OPTIONS) happen for some methods/headers.",
+      "Allow headers like `Authorization` if you use tokens.",
+      "CORS is not authentication; you still need auth checks.",
+      "Be careful allowing `*` with credentials; it is not allowed.",
+      "Keep allowed methods and headers minimal.",
+      "Cache preflight responses when appropriate.",
+      "Test CORS with real browser requests, not just curl."
+    ],
+    "summary": [
+      "CORS controls browser cross-origin calls.",
+      "Use `Access-Control-Allow-Origin` correctly.",
+      "Handle OPTIONS preflight.",
+      "Allow required headers like Authorization.",
+      "CORS is not auth.",
+      "Restrict origins/methods/headers."
+    ]
+  },
+  "u53-pdo-crud": {
+    "details": [
+      "CRUD stands for Create, Read, Update, Delete.",
+      "Use prepared statements for all CRUD operations.",
+      "Named placeholders (`:email`) improve readability.",
+      "Use `lastInsertId()` after inserts when needed.",
+      "Check affected rows carefully for updates/deletes (`rowCount()`).",
+      "Fetch rows with `fetch()`/`fetchAll()` and `PDO::FETCH_ASSOC`.",
+      "Validate input before writing to the database.",
+      "Keep SQL in a repository layer, not in controllers/templates.",
+      "Handle unique constraint errors and return user-friendly messages.",
+      "Use transactions for multi-step changes."
+    ],
+    "summary": [
+      "CRUD = Create/Read/Update/Delete.",
+      "Use prepared statements.",
+      "Use named placeholders for clarity.",
+      "`lastInsertId()` helps after inserts.",
+      "Validate input before DB writes.",
+      "Keep DB logic in a data layer."
+    ]
+  },
+  "u54-transactions": {
+    "details": [
+      "Transactions make multiple DB statements atomic.",
+      "Start with `$pdo->beginTransaction()`.",
+      "Finish with `$pdo->commit()` on success.",
+      "Use `$pdo->rollBack()` on failure.",
+      "Wrap transaction code in try/catch to ensure rollback.",
+      "Keep transactions short to avoid locking issues.",
+      "Understand isolation levels when handling concurrent writes.",
+      "Avoid doing network calls inside DB transactions.",
+      "Use transactions for multi-table updates and transfers.",
+      "Log errors when a transaction fails for debugging."
+    ],
+    "summary": [
+      "Transactions are atomic groups of DB operations.",
+      "Begin, commit, or roll back.",
+      "Use try/catch to ensure rollback.",
+      "Keep transactions short.",
+      "Use for multi-step consistency.",
+      "Avoid slow work inside transactions."
+    ]
+  },
+  "u55-testing-advanced": {
+    "details": [
+      "Assertions express what should be true after running code.",
+      "`assertSame()` checks value and type.",
+      "`assertEquals()` is looser and may coerce types.",
+      "Use `setUp()` to prepare common fixtures.",
+      "Use data providers to test many inputs easily.",
+      "Test one behavior per test when possible.",
+      "Avoid hitting real external services in unit tests.",
+      "Use integration tests separately for DB/HTTP behavior.",
+      "Name tests so failures are easy to understand.",
+      "Run tests automatically in CI."
+    ],
+    "summary": [
+      "Use the right assertion (`assertSame` vs `assertEquals`).",
+      "Structure tests with fixtures and data providers.",
+      "Keep unit tests isolated.",
+      "Use integration tests separately.",
+      "Name tests clearly.",
+      "Run tests in CI."
+    ]
+  },
+  "u56-mocking-di": {
+    "details": [
+      "Dependency injection means passing dependencies in, not creating them inside.",
+      "Interfaces make it easy to swap implementations.",
+      "Mocks/fakes/stubs are test doubles for dependencies.",
+      "Mock behavior, not internal implementation details.",
+      "Avoid mocking everything; sometimes a fake is better than a mock.",
+      "Constructor injection is common and explicit.",
+      "A service container can build objects for you in larger apps.",
+      "DI reduces coupling and improves testability.",
+      "Avoid globals/singletons for core dependencies.",
+      "Keep boundaries clear: controllers call services, services call repositories."
+    ],
+    "summary": [
+      "DI reduces coupling.",
+      "Interfaces enable swapping implementations.",
+      "Mocks are test doubles for dependencies.",
+      "Mock behavior, not internals.",
+      "Prefer explicit constructor injection.",
+      "Avoid globals/singletons."
+    ]
+  },
+  "u57-caching": {
+    "details": [
+      "Caching stores results so you do not recompute them each time.",
+      "OPcache caches compiled PHP bytecode (performance boost).",
+      "APCu caches user data in memory per server.",
+      "External caches (Redis/Memcached) can share cache across servers.",
+      "Choose cache keys carefully and avoid collisions.",
+      "Set TTLs (expiration) and handle cache misses safely.",
+      "Cache invalidation is hard; design for it.",
+      "Do not cache sensitive user-specific data without proper scoping.",
+      "HTTP caching (ETag/Cache-Control) helps for public resources.",
+      "Measure performance before and after caching to confirm benefit."
+    ],
+    "summary": [
+      "Caching improves performance.",
+      "OPcache caches bytecode.",
+      "APCu/Redis cache computed values.",
+      "Use TTLs and safe cache keys.",
+      "Handle cache misses.",
+      "Measure to confirm benefit."
+    ]
+  },
+  "u58-deployment": {
+    "details": [
+      "Production deployments usually run PHP via PHP-FPM behind Nginx/Apache.",
+      "Separate config per environment (dev/stage/prod).",
+      "Turn off `display_errors` and enable logging in production.",
+      "Use environment variables for secrets and config.",
+      "Set correct file permissions (least privilege).",
+      "Use HTTPS and secure headers.",
+      "Monitor logs, errors, and performance.",
+      "Back up databases and important files.",
+      "Use safe deployment strategies when possible.",
+      "Keep dependencies and PHP version updated for security."
+    ],
+    "summary": [
+      "Use PHP-FPM with a web server.",
+      "Disable `display_errors` in prod.",
+      "Use env vars for config.",
+      "Set least-privilege permissions.",
+      "Monitor and back up.",
+      "Keep software updated."
+    ]
+  },
+  "u59-laravel-basics": {
+    "details": [
+      "Laravel is a full-stack PHP framework.",
+      "It uses Composer for dependencies and autoloading.",
+      "`php artisan` is Laravel's CLI for common tasks.",
+      "Configuration lives in `.env` and `config/`.",
+      "Laravel encourages MVC structure.",
+      "Routes live in `routes/web.php` and `routes/api.php`.",
+      "Laravel provides migrations and an ORM (Eloquent).",
+      "Use `php artisan serve` for local dev (not production).",
+      "Use middleware for auth, logging, and more.",
+      "Follow Laravel documentation and conventions for best results."
+    ],
+    "summary": [
+      "Laravel is a popular PHP framework.",
+      "Use `artisan` for CLI tasks.",
+      "Config is in `.env` and `config/`.",
+      "Follows MVC conventions.",
+      "Provides routing, migrations, and Eloquent.",
+      "Follow docs and conventions."
+    ]
+  },
+  "u60-laravel-routing": {
+    "details": [
+      "Routes map URLs to controllers/closures.",
+      "Web routes live in `routes/web.php`.",
+      "API routes live in `routes/api.php`.",
+      "Use route parameters like `/users/{id}`.",
+      "Group routes and apply middleware to groups.",
+      "Controllers keep route files clean as apps grow.",
+      "Named routes help generate URLs.",
+      "Use resource routes for CRUD patterns.",
+      "Return JSON responses for APIs.",
+      "Validate input in controllers or FormRequest classes."
+    ],
+    "summary": [
+      "Define routes in `routes/web.php` and `routes/api.php`.",
+      "Use controllers and middleware for organization.",
+      "Use route params for dynamic URLs.",
+      "Resource routes help CRUD.",
+      "Return JSON for APIs.",
+      "Validate requests."
+    ]
+  },
+  "u61-laravel-eloquent": {
+    "details": [
+      "Eloquent models represent database tables.",
+      "Use migrations to create and change tables.",
+      "Query with `where`, `orderBy`, `first`, `get`.",
+      "Relationships include `hasOne`, `hasMany`, `belongsTo`, and more.",
+      "Use eager loading (`with`) to avoid N+1 queries.",
+      "Mass assignment requires fillable/guarded configuration.",
+      "Use model casting to convert attributes to types.",
+      "Use pagination for large lists.",
+      "Prefer database constraints (unique, foreign keys) for integrity.",
+      "Use factories/seeders to create test data."
+    ],
+    "summary": [
+      "Models map to tables.",
+      "Query with fluent methods.",
+      "Use relationships and eager loading.",
+      "Configure mass assignment.",
+      "Use migrations and constraints.",
+      "Use pagination for lists."
+    ]
+  },
+  "u62-laravel-validation": {
+    "details": [
+      "Validation checks request data before you use it.",
+      "Use `$request->validate([...])` for quick validation.",
+      "FormRequest classes keep validation rules reusable and clean.",
+      "Rules can be arrays (`['required', 'email']`) or strings (`'required|email'`).",
+      "Validation automatically returns errors for web requests.",
+      "For APIs, return JSON validation errors with proper status codes.",
+      "Normalize input as needed (trim, lowercase).",
+      "Validate file uploads with size/type rules.",
+      "Keep error messages user-friendly.",
+      "Validate at the edge of the system (controllers)."
+    ],
+    "summary": [
+      "Validate requests before using data.",
+      "Use `$request->validate()` or FormRequest.",
+      "Rules can be arrays or strings.",
+      "Return clear validation errors.",
+      "Validate uploads too.",
+      "Validate at the controller boundary."
+    ]
+  },
+  "u63-laravel-auth": {
+    "details": [
+      "Laravel protects routes with middleware like `auth`.",
+      "Web apps use sessions and CSRF protection by default.",
+      "Passwords are hashed securely through Laravel helpers.",
+      "Authorization checks can use policies and gates.",
+      "For APIs, consider token auth like Sanctum.",
+      "Use middleware groups to apply security consistently.",
+      "Never store plaintext passwords.",
+      "Rate limit login endpoints to reduce brute force risk.",
+      "Use HTTPS and secure cookie settings in production.",
+      "Keep Laravel updated and follow security best practices."
+    ],
+    "summary": [
+      "Use `auth` middleware to protect routes.",
+      "Laravel includes sessions and CSRF for web.",
+      "Passwords are hashed securely.",
+      "Policies/gates handle authorization.",
+      "Sanctum is common for API tokens.",
+      "Keep Laravel updated for security."
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lingora Admin</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0b0b;
+        --panel: rgba(18, 18, 18, 0.75);
+        --border: rgba(255, 255, 255, 0.12);
+        --border-strong: rgba(255, 255, 255, 0.16);
+        --text: #f5f5f5;
+        --muted: #a3a3a3;
+        --gold: #d4af37;
+        --radius: 16px;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: radial-gradient(1400px 900px at 20% 0%, #1a1a1a 0%, var(--bg) 60%, #000 100%);
+        color: var(--text);
+      }
+
+      header { position: sticky; top:0; background: rgba(0, 0, 0, 0.6); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
+      .inner { max-width: 1100px; margin: 0 auto; padding: 18px; display:flex; align-items:center; justify-content:space-between; gap: 12px; }
+      .brand { font-weight: 900; letter-spacing: .5px; color: var(--gold); }
+      .pills { display:flex; align-items:center; gap: 10px; flex-wrap: wrap; justify-content:flex-end; }
+      .pill { display:inline-flex; gap: 8px; align-items:center; padding: 9px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(18, 18, 18, 0.55); font-size: 13px; color: var(--text); }
+      a.pill { color: var(--gold); text-decoration:none; }
+      a.pill:hover { border-color: rgba(212, 175, 55, 0.45); }
+
+      main { max-width: 1100px; margin: 0 auto; padding: 18px; display:grid; gap: 14px; }
+      .card { border: 1px solid var(--border); background: var(--panel); border-radius: var(--radius); padding: 16px; }
+      h2 { margin:0 0 10px; font-size: 15px; letter-spacing: 0.2px; color:#e5e5e5; }
+      .muted { color: var(--muted); font-size: 13px; }
+
+      .row { display:flex; flex-wrap: wrap; gap: 10px; align-items:center; }
+      .grid { display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto; gap: 10px; align-items:end; }
+      @media (max-width: 960px) { .grid { grid-template-columns: 1fr; } }
+
+      label { display:block; font-weight: 700; font-size: 12px; color: #e5e5e5; margin-bottom: 6px; }
+      input {
+        width:100%;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border-strong);
+        background: rgba(0, 0, 0, 0.30);
+        color: var(--text);
+        outline: none;
+      }
+      input:focus { border-color: rgba(212, 175, 55, 0.7); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16); }
+
+      button { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border-strong); background: rgba(0, 0, 0, 0.35); color: var(--text); cursor:pointer; }
+      button:hover { border-color: rgba(212, 175, 55, 0.45); }
+      .primary { border-color: rgba(212, 175, 55, 0.55); color: var(--gold); }
+
+      table { width:100%; border-collapse: collapse; overflow:hidden; border-radius: 14px; border: 1px solid var(--border); }
+      th, td { text-align:left; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 13px; vertical-align: top; }
+      th { background: rgba(0,0,0,0.25); color: #e5e5e5; font-weight: 800; }
+      tr:hover td { background: rgba(0,0,0,0.18); }
+
+      .actions { display:flex; flex-wrap: wrap; gap: 8px; align-items:center; }
+      .small { padding: 8px 10px; border-radius: 10px; font-size: 12px; }
+      .hr { height: 1px; background: var(--border); margin: 12px 0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="brand">Lingora Admin</div>
+        <div class="pills">
+          <span class="pill">{{ user.name }} ({{ user.email }})</span>
+          <a class="pill" href="/admin/logout">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Create user</h2>
+        <form method="post" action="/admin/users" class="grid">
+          <div>
+            <label>Name</label>
+            <input name="name" required />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" name="password" required />
+          </div>
+          <div class="row">
+            <button class="primary" type="submit">Create</button>
+            <a class="pill" href="/admin/export/users.csv">Export CSV</a>
+          </div>
+        </form>
+        <div class="muted" style="margin-top:10px">Users can also self-register in the mobile app.</div>
+      </section>
+
+      <section class="card">
+        <h2>Users</h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:64px">ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th style="width:120px">Roles</th>
+              <th style="width:220px">Created</th>
+              <th style="width:320px">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for u in users %}
+              <tr>
+                <td>{{ u.id }}</td>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.roles }}</td>
+                <td class="muted">{{ u.created_at }}</td>
+                <td>
+                  <div class="actions">
+                    <form method="post" action="/admin/users/{{ u.id }}/password" class="actions">
+                      <input class="small" type="password" name="password" placeholder="New password" required />
+                      <button class="small" type="submit">Set</button>
+                    </form>
+                    <form method="post" action="/admin/users/{{ u.id }}/delete" onsubmit="return confirm('Delete user {{ u.email }}?');">
+                      <button class="small" type="submit">Delete</button>
+                    </form>
+                  </div>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

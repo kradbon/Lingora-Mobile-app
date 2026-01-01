@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "l01-html-intro-q01",
+    "title": "Quiz 1 for Intro to HTML",
+    "learn": {
+      "text": "HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using elements represented by tags.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What does HTML stand for?",
+      "choices": [
+        "HyperText Markup Language",
+        "HighText Machine Language",
+        "HyperText and links Markup Language",
+        "None of these"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q02",
+    "title": "Quiz 2 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Who makes the Web standards?",
+      "choices": [
+        "The World Wide Web Consortium",
+        "Google",
+        "Microsoft",
+        "Mozilla"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q03",
+    "title": "Quiz 3 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Choose the correct HTML element for the largest heading:",
+      "choices": [
+        "<h1>",
+        "<heading>",
+        "<h6>",
+        "<head>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q04",
+    "title": "Quiz 4 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What is the correct HTML element for inserting a line break?",
+      "choices": [
+        "<br>",
+        "<lb>",
+        "<break>",
+        "<newline>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q05",
+    "title": "Quiz 5 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What is the correct HTML for adding a background color?",
+      "choices": [
+        "<body style='background-color:yellow;'>",
+        "<body bg='yellow'>",
+        "<background>yellow</background>",
+        "<body style='bg-color:yellow;'>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q06",
+    "title": "Quiz 6 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Choose the correct HTML element to define important text",
+      "choices": [
+        "<strong>",
+        "<important>",
+        "<b>",
+        "<i>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q07",
+    "title": "Quiz 7 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Choose the correct HTML element to emphasize text",
+      "choices": [
+        "<em>",
+        "<i>",
+        "<italic>",
+        "<emphasis>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q08",
+    "title": "Quiz 8 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which character is used to indicate an end tag?",
+      "choices": [
+        "/",
+        "*",
+        "<",
+        "^"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q09",
+    "title": "Quiz 9 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "How can you open a link in a new tab/browser window?",
+      "choices": [
+        "<a href='url' target='_blank'>",
+        "<a href='url' new>",
+        "<a href='url' target='new'>",
+        "<a href='url' window='new'>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l01-html-intro-q10",
+    "title": "Quiz 10 for Intro to HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which of these elements are all <table> elements?",
+      "choices": [
+        "<table><tr><td>",
+        "<table><head><tfoot>",
+        "<table><tr><tt>",
+        "<thead><body><tr>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q01",
+    "title": "Quiz 1 for Basic Tags",
+    "learn": {
+      "text": "Headings are defined with <h1> to <h6>. Paragraphs use <p>. Line breaks use <br> (an empty tag).",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag is used to define a paragraph?",
+      "choices": [
+        "<p>",
+        "<para>",
+        "<paragraph>",
+        "<text>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q02",
+    "title": "Quiz 2 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag creates a horizontal line?",
+      "choices": [
+        "<hr>",
+        "<line>",
+        "<br>",
+        "<hl>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q03",
+    "title": "Quiz 3 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML attribute specifies an alternate text for an image?",
+      "choices": [
+        "alt",
+        "title",
+        "src",
+        "longdesc"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q04",
+    "title": "Quiz 4 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML element defines the title of a document?",
+      "choices": [
+        "<title>",
+        "<meta>",
+        "<head>",
+        "<h1"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q05",
+    "title": "Quiz 5 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML tag is used to define an unordered list?",
+      "choices": [
+        "<ul>",
+        "<ol>",
+        "<list>",
+        "<li>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q06",
+    "title": "Quiz 6 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML tag is used to define an ordered list?",
+      "choices": [
+        "<ol>",
+        "<ul>",
+        "<list>",
+        "<li>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q07",
+    "title": "Quiz 7 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML tag is used to define a list item?",
+      "choices": [
+        "<li>",
+        "<ul>",
+        "<ol>",
+        "<list>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q08",
+    "title": "Quiz 8 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What is the correct HTML for creating a hyperlink?",
+      "choices": [
+        "<a href='http://www.w3schools.com'>W3Schools</a>",
+        "<a>http://www.w3schools.com</a>",
+        "<a url='http://www.w3schools.com'>W3Schools</a>",
+        "<a name='http://www.w3schools.com'>W3Schools</a>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q09",
+    "title": "Quiz 9 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag is used to define a table row?",
+      "choices": [
+        "<tr>",
+        "<td>",
+        "<th>",
+        "<table>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l02-html-structure-q10",
+    "title": "Quiz 10 for Basic Tags",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag is used to define a table header?",
+      "choices": [
+        "<th>",
+        "<td>",
+        "<tr>",
+        "<thead>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q01",
+    "title": "Quiz 1 for Text Formatting",
+    "learn": {
+      "text": "HTML provides tags to format text. <b> makes text bold, <i> makes it italic. <strong> and <em> convey semantic importance.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines bold text?",
+      "choices": [
+        "<b>",
+        "<bold>",
+        "<big>",
+        "<dark>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q02",
+    "title": "Quiz 2 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines italic text?",
+      "choices": [
+        "<i>",
+        "<italic>",
+        "<slant>",
+        "<em>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q03",
+    "title": "Quiz 3 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines marked/highlighted text?",
+      "choices": [
+        "<mark>",
+        "<highlight>",
+        "<high>",
+        "<b>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q04",
+    "title": "Quiz 4 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines smaller text?",
+      "choices": [
+        "<small>",
+        "<tiny>",
+        "<min>",
+        "<low>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q05",
+    "title": "Quiz 5 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines deleted text?",
+      "choices": [
+        "<del>",
+        "<delete>",
+        "<remove>",
+        "<cross>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q06",
+    "title": "Quiz 6 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines inserted text?",
+      "choices": [
+        "<ins>",
+        "<insert>",
+        "<add>",
+        "<new>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q07",
+    "title": "Quiz 7 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines subscript text?",
+      "choices": [
+        "<sub>",
+        "<sup>",
+        "<low>",
+        "<bottom>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q08",
+    "title": "Quiz 8 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which element defines superscript text?",
+      "choices": [
+        "<sup>",
+        "<sub>",
+        "<top>",
+        "<high>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q09",
+    "title": "Quiz 9 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "How to define a quote from another source?",
+      "choices": [
+        "<blockquote>",
+        "<quote>",
+        "<q>",
+        "<cite>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l03-formatting-q10",
+    "title": "Quiz 10 for Text Formatting",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag represents the title of a work?",
+      "choices": [
+        "<cite>",
+        "<title>",
+        "<work>",
+        "<ref>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q01",
+    "title": "Quiz 1 for Lists & Links",
+    "learn": {
+      "text": "Lists organizes data. <ul> is unordered (bullets), <ol> is ordered (numbers). <a> creates hyperlinks.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute specifies the destination of a link?",
+      "choices": [
+        "href",
+        "src",
+        "link",
+        "dest"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q02",
+    "title": "Quiz 2 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute is used to open a link in a new tab?",
+      "choices": [
+        "target='_blank'",
+        "target='_new'",
+        "window='_blank'",
+        "open='new'"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q03",
+    "title": "Quiz 3 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "How do you create an email link?",
+      "choices": [
+        "<a href='mailto:xx@yy.com'>",
+        "<a href='xx@yy.com'>",
+        "<mail>xx@yy.com</mail>",
+        "<a mail='xx@yy.com'>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q04",
+    "title": "Quiz 4 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "How to remove the underline from a link in CSS?",
+      "choices": [
+        "text-decoration:none",
+        "text-underline:none",
+        "link-decoration:none",
+        "underline:none"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q05",
+    "title": "Quiz 5 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which list type uses bullets?",
+      "choices": [
+        "Unordered",
+        "Ordered",
+        "Definition",
+        "Data"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q06",
+    "title": "Quiz 6 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which list type uses numbers?",
+      "choices": [
+        "Ordered",
+        "Unordered",
+        "Definition",
+        "Data"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q07",
+    "title": "Quiz 7 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag starts a definition list?",
+      "choices": [
+        "<dl>",
+        "<dt>",
+        "<dd>",
+        "<list>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q08",
+    "title": "Quiz 8 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag defines a term in a definition list?",
+      "choices": [
+        "<dt>",
+        "<dl>",
+        "<dd>",
+        "<term>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q09",
+    "title": "Quiz 9 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag describes a term in a definition list?",
+      "choices": [
+        "<dd>",
+        "<dt>",
+        "<dl>",
+        "<desc>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l04-lists-links-q10",
+    "title": "Quiz 10 for Lists & Links",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Can you nest lists inside other lists?",
+      "choices": [
+        "Yes",
+        "No",
+        "Only ordered inside unordered",
+        "Only unordered inside ordered"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q01",
+    "title": "Quiz 1 for Images & Media",
+    "learn": {
+      "text": "Images are embedded with the <img> tag. It is empty and contains attributes only. \"src\" specifies the path, \"alt\" provides text for screen readers.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag embeds an image?",
+      "choices": [
+        "<img>",
+        "<image>",
+        "<pic>",
+        "<src>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q02",
+    "title": "Quiz 2 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute specifies the image source?",
+      "choices": [
+        "src",
+        "href",
+        "link",
+        "file"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q03",
+    "title": "Quiz 3 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Is the <img> tag self-closing?",
+      "choices": [
+        "Yes",
+        "No",
+        "Sometimes",
+        "Only in HTML4"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q04",
+    "title": "Quiz 4 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute provides text if image fails?",
+      "choices": [
+        "alt",
+        "title",
+        "text",
+        "desc"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q05",
+    "title": "Quiz 5 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag embeds a video?",
+      "choices": [
+        "<video>",
+        "<movie>",
+        "<film>",
+        "<play>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q06",
+    "title": "Quiz 6 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag embeds audio?",
+      "choices": [
+        "<audio>",
+        "<sound>",
+        "<music>",
+        "<play>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q07",
+    "title": "Quiz 7 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute adds play/pause buttons?",
+      "choices": [
+        "controls",
+        "play",
+        "buttons",
+        "auto"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q08",
+    "title": "Quiz 8 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag can wrap an image and a caption?",
+      "choices": [
+        "<figure>",
+        "<div>",
+        "<span>",
+        "<img-wrap>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q09",
+    "title": "Quiz 9 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which tag defines the caption for <figure>?",
+      "choices": [
+        "<figcaption>",
+        "<caption>",
+        "<title>",
+        "<desc>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l05-media-q10",
+    "title": "Quiz 10 for Images & Media",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which format is best for vector graphics?",
+      "choices": [
+        "SVG",
+        "JPG",
+        "PNG",
+        "GIF"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q01",
+    "title": "Quiz 1 for Intro to CSS",
+    "learn": {
+      "text": "CSS (Cascading Style Sheets) formats the layout of a webpage. You can control color, font, size, and spacing.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What does CSS stand for?",
+      "choices": [
+        "Cascading Style Sheets",
+        "Creative Style Sheets",
+        "Computer Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q02",
+    "title": "Quiz 2 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Where in HTML refer to external CSS?",
+      "choices": [
+        "In the <head> section",
+        "In the <body> section",
+        "At the end",
+        "Anywhere"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q03",
+    "title": "Quiz 3 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which HTML tag internal CSS?",
+      "choices": [
+        "<style>",
+        "<css>",
+        "<script>",
+        "<link>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q04",
+    "title": "Quiz 4 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Which attribute inline styles?",
+      "choices": [
+        "style",
+        "class",
+        "font",
+        "styles"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q05",
+    "title": "Quiz 5 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Correct CSS syntax?",
+      "choices": [
+        "body {color: black;}",
+        "{body;color:black;}",
+        "body:color=black;",
+        "body {color: black}"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q06",
+    "title": "Quiz 6 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "How to insert CSS comment?",
+      "choices": [
+        "/* comment */",
+        "// comment",
+        "' comment",
+        "// comment //"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q07",
+    "title": "Quiz 7 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Background color property?",
+      "choices": [
+        "background-color",
+        "color",
+        "bgcolor",
+        "bg-color"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q08",
+    "title": "Quiz 8 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Text color property?",
+      "choices": [
+        "color",
+        "text-color",
+        "fgcolor",
+        "font-color"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q09",
+    "title": "Quiz 9 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Text size property?",
+      "choices": [
+        "font-size",
+        "text-size",
+        "font-style",
+        "text-style"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l06-css-intro-q10",
+    "title": "Quiz 10 for Intro to CSS",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Text alignment property?",
+      "choices": [
+        "text-align",
+        "align",
+        "text-pos",
+        "font-align"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q01",
+    "title": "Quiz 1 for CSS Selectors",
+    "learn": {
+      "text": "Selectors allow you to select and manipulate HTML elements. Common ones are Element, ID, and Class selectors.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select element id 'demo'?",
+      "choices": [
+        "#demo",
+        ".demo",
+        "demo",
+        "*demo"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q02",
+    "title": "Quiz 2 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select elements class 'test'?",
+      "choices": [
+        ".test",
+        "#test",
+        "test",
+        "*test"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q03",
+    "title": "Quiz 3 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select all p elements?",
+      "choices": [
+        "p",
+        ".p",
+        "#p",
+        "all.p"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q04",
+    "title": "Quiz 4 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select elements inside div?",
+      "choices": [
+        "div *",
+        "div > all",
+        "div.all",
+        "div all"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q05",
+    "title": "Quiz 5 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select class 'a' and 'b'?",
+      "choices": [
+        ".a.b",
+        ".a .b",
+        ".a, .b",
+        "a.b"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q06",
+    "title": "Quiz 6 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select direct children?",
+      "choices": [
+        ">",
+        "+",
+        "~",
+        "*"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q07",
+    "title": "Quiz 7 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select adjacent sibling?",
+      "choices": [
+        "+",
+        "~",
+        ">",
+        "*"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q08",
+    "title": "Quiz 8 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select all general siblings?",
+      "choices": [
+        "~",
+        "+",
+        ">",
+        "."
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q09",
+    "title": "Quiz 9 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Selector targets all?",
+      "choices": [
+        "*",
+        ".",
+        "#",
+        "all"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l07-selectors-q10",
+    "title": "Quiz 10 for CSS Selectors",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Pseudo-class first child?",
+      "choices": [
+        ":first-child",
+        ":child-first",
+        ":first",
+        ":one"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q01",
+    "title": "Quiz 1 for Box Model",
+    "learn": {
+      "text": "All HTML elements can be considered as boxes. The Box Model wraps content with Margins, Borders, Padding, and Content.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Space around content (inside)?",
+      "choices": [
+        "padding",
+        "margin",
+        "spacing",
+        "border"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q02",
+    "title": "Quiz 2 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Space outside border?",
+      "choices": [
+        "margin",
+        "padding",
+        "spacing",
+        "border"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q03",
+    "title": "Quiz 3 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Draws line around padding?",
+      "choices": [
+        "border",
+        "outline",
+        "line",
+        "stroke"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q04",
+    "title": "Quiz 4 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Box Model components?",
+      "choices": [
+        "Margin, Border, Padding, Content",
+        "Header, Footer",
+        "Text, Links",
+        "HTML, CSS"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q05",
+    "title": "Quiz 5 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Width property?",
+      "choices": [
+        "width",
+        "size",
+        "wt",
+        "h-size"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q06",
+    "title": "Quiz 6 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Border-box include padding?",
+      "choices": [
+        "Yes",
+        "No",
+        "Only height",
+        "Sometimes"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q07",
+    "title": "Quiz 7 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Inline-block value?",
+      "choices": [
+        "display: inline-block",
+        "display: block",
+        "display: inline",
+        "float: left"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q08",
+    "title": "Quiz 8 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Center block horizontally?",
+      "choices": [
+        "margin: 0 auto",
+        "text-align: center",
+        "align: center",
+        "padding: auto"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q09",
+    "title": "Quiz 9 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Margin value for 4 sides?",
+      "choices": [
+        "margin: 10px",
+        "margin: 10px 20px",
+        "margin: 10px 20px 30px",
+        "margin: top"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l08-box-model-q10",
+    "title": "Quiz 10 for Box Model",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Default width block element?",
+      "choices": [
+        "auto",
+        "100%",
+        "0",
+        "50%"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q01",
+    "title": "Quiz 1 for Fonts & Text",
+    "learn": {
+      "text": "CSS offers powerful text styling. You can change the font family, size, weight, alignment, and decoration.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Font family property?",
+      "choices": [
+        "font-family",
+        "font-type",
+        "font",
+        "text-font"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q02",
+    "title": "Quiz 2 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Make text bold?",
+      "choices": [
+        "font-weight",
+        "font-style",
+        "text-decoration",
+        "font-variant"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q03",
+    "title": "Quiz 3 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Make text italic?",
+      "choices": [
+        "font-style",
+        "font-weight",
+        "text-style",
+        "font-variant"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q04",
+    "title": "Quiz 4 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Remove link underlines?",
+      "choices": [
+        "text-decoration: none",
+        "text-style: no-underline",
+        "text-decoration: no-underline",
+        "font-decoration: none"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q05",
+    "title": "Quiz 5 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Uppercase text property?",
+      "choices": [
+        "text-transform",
+        "text-style",
+        "font-transform",
+        "text-variant"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q06",
+    "title": "Quiz 6 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Unit relative to root size?",
+      "choices": [
+        "rem",
+        "em",
+        "px",
+        "%"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q07",
+    "title": "Quiz 7 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Unit relative to parent size?",
+      "choices": [
+        "em",
+        "rem",
+        "px",
+        "vh"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q08",
+    "title": "Quiz 8 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Line height property?",
+      "choices": [
+        "line-height",
+        "spacing",
+        "text-height",
+        "line-spacing"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q09",
+    "title": "Quiz 9 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Letter spacing property?",
+      "choices": [
+        "letter-spacing",
+        "word-spacing",
+        "text-spacing",
+        "font-spacing"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l09-fonts-q10",
+    "title": "Quiz 10 for Fonts & Text",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Backup font specification?",
+      "choices": [
+        "Comma separated list",
+        "Space separated list",
+        "Not possible",
+        "Multiple props"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q01",
+    "title": "Quiz 1 for Flexbox",
+    "learn": {
+      "text": "Flexbox is a layout module used to arrange items in rows or columns without floats. It creates flexible responsive layouts.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Enable flexbox?",
+      "choices": [
+        "display: flex",
+        "display: block",
+        "display: grid",
+        "position: flex"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q02",
+    "title": "Quiz 2 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Main axis align?",
+      "choices": [
+        "justify-content",
+        "align-items",
+        "align-content",
+        "flex-align"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q03",
+    "title": "Quiz 3 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Cross axis align?",
+      "choices": [
+        "align-items",
+        "justify-content",
+        "vertical-align",
+        "flex-align"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q04",
+    "title": "Quiz 4 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Change flex direction?",
+      "choices": [
+        "flex-direction",
+        "flex-flow",
+        "flex-wrap",
+        "direction"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q05",
+    "title": "Quiz 5 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Wrap flex items?",
+      "choices": [
+        "flex-wrap: wrap",
+        "flex-wrap: no-wrap",
+        "flex-flow: column",
+        "display: wrap"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q06",
+    "title": "Quiz 6 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Shorthand grow, shrink, basis?",
+      "choices": [
+        "flex",
+        "flex-grow",
+        "flex-basis",
+        "flex-flow"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q07",
+    "title": "Quiz 7 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Default flex-direction?",
+      "choices": [
+        "row",
+        "column",
+        "row-reverse",
+        "column-reverse"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q08",
+    "title": "Quiz 8 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Space between flex lines?",
+      "choices": [
+        "align-content",
+        "justify-content",
+        "align-items",
+        "flex-content"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q09",
+    "title": "Quiz 9 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Center item in flex?",
+      "choices": [
+        "justify-content:center; align-items:center;",
+        "text-align:center",
+        "margin:auto",
+        "position:center"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l10-flexbox-q10",
+    "title": "Quiz 10 for Flexbox",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Reorder specific items?",
+      "choices": [
+        "order",
+        "z-index",
+        "rank",
+        "sort"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q01",
+    "title": "Quiz 1 for CSS Grid",
+    "learn": {
+      "text": "CSS Grid Layout is a 2-dimensional system, handling both columns and rows. It is perfect for page-wide layouts.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Enable grid?",
+      "choices": [
+        "display: grid",
+        "display: flex",
+        "display: block",
+        "grid: on"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q02",
+    "title": "Quiz 2 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Define column tracks?",
+      "choices": [
+        "grid-template-columns",
+        "grid-columns",
+        "columns",
+        "grid-template"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q03",
+    "title": "Quiz 3 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Grid fraction unit?",
+      "choices": [
+        "fr",
+        "px",
+        "%",
+        "em"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q04",
+    "title": "Quiz 4 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Grid gap property?",
+      "choices": [
+        "gap",
+        "spacing",
+        "margin",
+        "padding"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q05",
+    "title": "Quiz 5 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Span 2 columns?",
+      "choices": [
+        "grid-column: span 2",
+        "grid-width: 2",
+        "colspan: 2",
+        "grid-span: 2"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q06",
+    "title": "Quiz 6 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Align inside cell?",
+      "choices": [
+        "align-items / justify-items",
+        "text-align",
+        "vertical-align",
+        "position"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q07",
+    "title": "Quiz 7 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Define named grid areas?",
+      "choices": [
+        "grid-template-areas",
+        "grid-area",
+        "grid-names",
+        "grid-map"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q08",
+    "title": "Quiz 8 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Rows/cols shorthand?",
+      "choices": [
+        "grid-template",
+        "grid",
+        "grid-layout",
+        "grid-structure"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q09",
+    "title": "Quiz 9 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Auto-placed items direction?",
+      "choices": [
+        "Row",
+        "Column",
+        "Dense",
+        "Sparse"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l11-grid-q10",
+    "title": "Quiz 10 for CSS Grid",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Nested grids?",
+      "choices": [
+        "Yes",
+        "No",
+        "Only 1 level",
+        "Only with flexbox"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q01",
+    "title": "Quiz 1 for Responsive Design",
+    "learn": {
+      "text": "Responsive Web Design makes web pages render well on all devices. Media queries (@media) allow you to apply different styles for different screen sizes.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "RWD stands for?",
+      "choices": [
+        "Responsive Web Design",
+        "Rapid Web Development",
+        "Real Web Design",
+        "Robust Web Design"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q02",
+    "title": "Quiz 2 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Essential RWD meta?",
+      "choices": [
+        "<meta name='viewport'>",
+        "<meta name='mobile'>",
+        "<link rel='responsive'>",
+        "<meta name='responsive'>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q03",
+    "title": "Quiz 3 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Styles based on width?",
+      "choices": [
+        "Media Queries",
+        "Flexbox",
+        "Grid",
+        "Variables"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q04",
+    "title": "Quiz 4 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Media query syntax?",
+      "choices": [
+        "@media screen and (max-width: 600px)",
+        "@media (600px)",
+        "@query max-width 600px",
+        "media: 600px"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q05",
+    "title": "Quiz 5 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Unit relative to viewport width?",
+      "choices": [
+        "vw",
+        "vh",
+        "%",
+        "px"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q06",
+    "title": "Quiz 6 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Unit relative to viewport height?",
+      "choices": [
+        "vh",
+        "vw",
+        "%",
+        "px"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q07",
+    "title": "Quiz 7 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "'mobile-first' meaning?",
+      "choices": [
+        "Style for mobile then scale up",
+        "Make mobile site",
+        "Use an app",
+        "Style for desktop first"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q08",
+    "title": "Quiz 8 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Hide on small screen?",
+      "choices": [
+        "display: none",
+        "visibility: hidden",
+        "opacity: 0",
+        "width: 0"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q09",
+    "title": "Quiz 9 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Responsive image CSS?",
+      "choices": [
+        "max-width: 100%; height: auto;",
+        "width: 100%",
+        "height: 100%",
+        "display: flex"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l12-responsive-q10",
+    "title": "Quiz 10 for Responsive Design",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "What is a breakpoint?",
+      "choices": [
+        "A width where layout changes",
+        "A bug in code",
+        "A pause",
+        "A server error"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q01",
+    "title": "Quiz 1 for Advanced Forms",
+    "learn": {
+      "text": "Forms allow user input. <input> has many types like text, password, checkbox, radio, date. <select> makes dropdowns.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Select tag for dropdown?",
+      "choices": [
+        "<select>",
+        "<list>",
+        "<dropdown>",
+        "<option>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q02",
+    "title": "Quiz 2 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Option in dropdown?",
+      "choices": [
+        "<option>",
+        "<item>",
+        "<select>",
+        "<choice>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q03",
+    "title": "Quiz 3 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Multi-line text input?",
+      "choices": [
+        "<textarea>",
+        "<input type='text'>",
+        "<text>",
+        "<box>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q04",
+    "title": "Quiz 4 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Clickable button?",
+      "choices": [
+        "<button>",
+        "<input type='button'>",
+        "<input type='submit'>",
+        "All of the above"
+      ],
+      "answer": 3
+    }
+  },
+  {
+    "id": "l13-input-forms-q05",
+    "title": "Quiz 5 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Group form elements?",
+      "choices": [
+        "<fieldset>",
+        "<group>",
+        "<section>",
+        "<div>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q06",
+    "title": "Quiz 6 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Caption for fieldset?",
+      "choices": [
+        "<legend>",
+        "<caption>",
+        "<title>",
+        "<label>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q07",
+    "title": "Quiz 7 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Password input type?",
+      "choices": [
+        "type='password'",
+        "type='hidden'",
+        "type='secure'",
+        "type='text'"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q08",
+    "title": "Quiz 8 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Single choice from group?",
+      "choices": [
+        "Radio",
+        "Checkbox",
+        "Select",
+        "Text"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q09",
+    "title": "Quiz 9 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Multiple selections?",
+      "choices": [
+        "Checkbox",
+        "Radio",
+        "Select",
+        "Button"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l13-input-forms-q10",
+    "title": "Quiz 10 for Advanced Forms",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Attribute for required input?",
+      "choices": [
+        "required",
+        "validate",
+        "must",
+        "needed"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q01",
+    "title": "Quiz 1 for Semantic HTML",
+    "learn": {
+      "text": "Semantic elements clearly describe their meaning to both the browser and the developer. Examples: <header>, <footer>, <article>, <section>.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Semantic HTML meaning?",
+      "choices": [
+        "Tags with meaning",
+        "Tags for style",
+        "Tags for scripts",
+        "Tags for errors"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q02",
+    "title": "Quiz 2 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Header of section tag?",
+      "choices": [
+        "<header>",
+        "<top>",
+        "<head>",
+        "<hgroup>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q03",
+    "title": "Quiz 3 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Main content tag?",
+      "choices": [
+        "<main>",
+        "<body>",
+        "<content>",
+        "<section>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q04",
+    "title": "Quiz 4 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Footer tag?",
+      "choices": [
+        "<footer>",
+        "<bottom>",
+        "<end>",
+        "<foot>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q05",
+    "title": "Quiz 5 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Nav links tag?",
+      "choices": [
+        "<nav>",
+        "<links>",
+        "<menu>",
+        "<navigate>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q06",
+    "title": "Quiz 6 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Self-contained content?",
+      "choices": [
+        "<article>",
+        "<section>",
+        "<div>",
+        "<aside>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q07",
+    "title": "Quiz 7 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Content aside from main?",
+      "choices": [
+        "<aside>",
+        "<sidebar>",
+        "<next>",
+        "<nav>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q08",
+    "title": "Quiz 8 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Document section tag?",
+      "choices": [
+        "<section>",
+        "<div>",
+        "<part>",
+        "<area>"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q09",
+    "title": "Quiz 9 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Semantic tags benefit?",
+      "choices": [
+        "SEO and Accessibility",
+        "Faster loading",
+        "Better colors",
+        "Less code"
+      ],
+      "answer": 0
+    }
+  },
+  {
+    "id": "l14-semantic-q10",
+    "title": "Quiz 10 for Semantic HTML",
+    "learn": {
+      "text": "Continue your practice.",
+      "details": [],
+      "summary": [],
+      "code": null
+    },
+    "quiz": {
+      "question": "Is <div> semantic?",
+      "choices": [
+        "No",
+        "Yes",
+        "Sometimes",
+        "Only in HTML5"
+      ],
+      "answer": 0
+    }
+  }
+]

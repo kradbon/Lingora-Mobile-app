@@ -1,0 +1,528 @@
+{
+  "u01-intro": {
+    "details": [
+      "PHP runs on the server; the browser only receives the HTML output.",
+      "You can embed PHP inside an HTML page using `<?php ... ?>` tags.",
+      "`echo` prints text (or variables) into the response body.",
+      "Most statements end with `;` and PHP files typically use the `.php` extension.",
+      "If you can see PHP code in the browser, the server is not executing PHP (it is serving the file as plain text)."
+    ],
+    "summary": [
+      "PHP is server-side (your source code stays on the server).",
+      "Start a PHP block with `<?php`.",
+      "Use `echo` to output text.",
+      "End statements with `;`."
+    ]
+  },
+  "u02-syntax": {
+    "details": [
+      "Variables always start with `$` and are created when you first assign to them.",
+      "PHP is dynamically typed: the same variable can hold a string, number, array, etc.",
+      "Statements usually end with `;` and blocks are wrapped with `{ ... }`.",
+      "Use `var_dump($value)` while learning to inspect types and values.",
+      "Prefer meaningful variable names and keep naming consistent (`$userEmail`, `$total`...)."
+    ],
+    "summary": [
+      "Variables start with `$`.",
+      "PHP is dynamically typed.",
+      "Use `;` to end statements.",
+      "Use `var_dump()` to debug values."
+    ]
+  },
+  "u03-strings": {
+    "details": [
+      "Single quotes (`'...'`) are literal: variables are not expanded.",
+      "Double quotes (`\"...\"`) interpolate variables and support escape sequences like `\\n`.",
+      "Concatenate strings with `.` (dot), not `+`.",
+      "Common helpers: `strlen`, `substr`, `str_replace`, `trim`.",
+      "When outputting user input, escape with `htmlspecialchars` to avoid XSS."
+    ],
+    "summary": [
+      "Double quotes interpolate; single quotes are literal.",
+      "Use `.` to concatenate.",
+      "String helpers: `strlen`, `substr`, `trim`.",
+      "Escape output with `htmlspecialchars()` when needed."
+    ]
+  },
+  "u04-arrays": {
+    "details": [
+      "PHP arrays are ordered maps: they can be indexed (`[0, 1, 2]`) or associative (`['k' => 'v']`).",
+      "Access elements with `$arr[$key]` and check existence with `isset($arr[$key])`.",
+      "Iterate using `foreach ($arr as $value)` or `foreach ($arr as $key => $value)`.",
+      "Useful functions: `count`, `array_merge`, `array_map`, `array_filter`, `in_array`.",
+      "Prefer associative arrays for structured data and keep keys consistent."
+    ],
+    "summary": [
+      "Arrays can be indexed or associative.",
+      "Use `foreach` to iterate.",
+      "Use `count()` for length.",
+      "Use `array_merge()` to combine arrays."
+    ]
+  },
+  "u05-control": {
+    "details": [
+      "Use `if / elseif / else` for branching and `switch` for discrete values.",
+      "Understand comparison: `==` coerces types; `===` compares type + value (recommended).",
+      "The ternary operator `cond ? a : b` is useful for simple decisions.",
+      "The null coalescing operator `??` provides defaults (`$x = $value ?? 'default';`).",
+      "Keep conditions readable; extract complex checks into well-named variables."
+    ],
+    "summary": [
+      "Branch with `if/elseif/else` and `switch`.",
+      "Prefer `===` over `==`.",
+      "Use `??` for defaults.",
+      "Use ternary for simple inline decisions."
+    ]
+  },
+  "u06-loops": {
+    "details": [
+      "`for` is best when you know how many times to loop (counter-based).",
+      "`while` runs while a condition is true; `do ... while` runs at least once.",
+      "`foreach` is the go-to loop for arrays and iterable data.",
+      "Use `break` to exit a loop and `continue` to skip to the next iteration.",
+      "Avoid infinite loops by making sure the loop condition can become false."
+    ],
+    "summary": [
+      "Use `foreach` for arrays.",
+      "Use `for` for counters.",
+      "`break` exits; `continue` skips an iteration.",
+      "Ensure loop conditions can finish."
+    ]
+  },
+  "u07-funcs": {
+    "details": [
+      "Functions are declared with `function name($arg) { ... }`.",
+      "Return values using `return` (a function without `return` returns `null`).",
+      "You can set default arguments (`function f($x = 10) { ... }`).",
+      "Type hints (`string`, `int`, `array`, `User`) improve clarity and catch bugs earlier.",
+      "Anonymous functions and arrow functions are common for callbacks (arrays, collections)."
+    ],
+    "summary": [
+      "Declare with `function`.",
+      "Return values with `return`.",
+      "Use defaults and type hints for clarity.",
+      "Callbacks often use anonymous/arrow functions."
+    ]
+  },
+  "u08-scope": {
+    "details": [
+      "Variables inside a function are local to that function by default.",
+      "Use `global $var;` or `$GLOBALS['var']` to access a global variable (avoid when possible).",
+      "`static` variables inside a function keep their value between calls.",
+      "Superglobals like `$_GET` and `$_POST` are available in any scope.",
+      "Prefer passing values into functions instead of relying on globals."
+    ],
+    "summary": [
+      "Function scope is local by default.",
+      "Use `global` / `$GLOBALS` sparingly.",
+      "`static` preserves values between calls.",
+      "Prefer dependency passing over globals."
+    ]
+  },
+  "u09-include": {
+    "details": [
+      "`include` emits a warning on failure; `require` throws a fatal error (stops execution).",
+      "Use `include_once` / `require_once` to avoid loading the same file twice.",
+      "Build reliable paths using `__DIR__` (e.g., `require __DIR__ . '/lib.php';`).",
+      "Prefer `require` for critical application files (config, autoloader).",
+      "In modern projects, Composer autoloading replaces most manual includes."
+    ],
+    "summary": [
+      "`require` stops execution on failure.",
+      "Use `*_once` to prevent duplicate loads.",
+      "Use `__DIR__` for stable paths.",
+      "Composer autoloading reduces manual includes."
+    ]
+  },
+  "u10-forms": {
+    "details": [
+      "Read form input from `$_POST` (POST) and `$_GET` (query string).",
+      "Never trust client input: validate types/format and enforce allowed values.",
+      "Escape output with `htmlspecialchars` when rendering user-provided values.",
+      "Use CSRF tokens for state-changing forms (POST/PUT/DELETE).",
+      "Return helpful error messages and keep validation logic close to input parsing."
+    ],
+    "summary": [
+      "Use `$_POST` and `$_GET` to read input.",
+      "Validate and sanitize everything.",
+      "Escape output to prevent XSS.",
+      "Use CSRF protection for forms."
+    ]
+  },
+  "u11-sessions": {
+    "details": [
+      "Call `session_start()` before reading or writing `$_SESSION`.",
+      "Sessions store data server-side and identify the user via a session cookie.",
+      "Regenerate session IDs after login (`session_regenerate_id(true)`) to prevent fixation.",
+      "Store minimal session data (IDs/flags), not large objects.",
+      "Configure secure cookie flags when possible (`httponly`, `secure`, `samesite`)."
+    ],
+    "summary": [
+      "Use `session_start()` before `$_SESSION`.",
+      "Sessions are server-side state tied to a cookie.",
+      "Regenerate IDs after login.",
+      "Keep session data small and secure."
+    ]
+  },
+  "u12-cookies": {
+    "details": [
+      "`setcookie()` must run before any output is sent (headers first).",
+      "Cookies are stored in the browser and read via `$_COOKIE` on later requests.",
+      "Use expiration, path, domain and `SameSite` to control cookie behavior.",
+      "Use `HttpOnly` to reduce XSS impact and `Secure` over HTTPS.",
+      "Do not store secrets in cookies; store opaque IDs and validate server-side."
+    ],
+    "summary": [
+      "Set cookies before output with `setcookie()`.",
+      "Read cookies via `$_COOKIE`.",
+      "Use `HttpOnly` + `Secure` when possible.",
+      "Avoid storing sensitive data in cookies."
+    ]
+  },
+  "u13-oop": {
+    "details": [
+      "Classes bundle state (properties) and behavior (methods).",
+      "Visibility (`public`, `protected`, `private`) controls access to members.",
+      "Create objects using `new ClassName()` and access members with `->`.",
+      "`$this` refers to the current object inside a method.",
+      "Use OOP to model domain concepts (User, Order, Invoice) and keep logic organized."
+    ],
+    "summary": [
+      "Classes group data + methods.",
+      "Instantiate with `new` and access with `->`.",
+      "Use visibility to encapsulate state.",
+      "`$this` refers to the current object."
+    ]
+  },
+  "u14-construct": {
+    "details": [
+      "`__construct()` runs automatically when an object is created.",
+      "Constructors set required state and validate inputs early.",
+      "In inheritance, call the parent constructor with `parent::__construct()` when needed.",
+      "Prefer explicit dependencies in constructors instead of creating objects inside methods.",
+      "Consider `readonly` properties (PHP 8.1+) for immutable value objects."
+    ],
+    "summary": [
+      "Constructors initialize objects.",
+      "Validate required state in `__construct`.",
+      "Call `parent::__construct()` in subclasses when appropriate.",
+      "Prefer dependency injection via constructor args."
+    ]
+  },
+  "u15-inherit": {
+    "details": [
+      "Inheritance lets a class reuse behavior from a base class using `extends`.",
+      "Override methods to specialize behavior; call base logic with `parent::method()`.",
+      "Use `final` to prevent extending/overriding where it must stay fixed.",
+      "Use abstract base classes for shared templates (common properties and required methods).",
+      "Prefer composition (having another object) when inheritance becomes complicated."
+    ],
+    "summary": [
+      "Use `extends` to inherit.",
+      "Override and use `parent::` when needed.",
+      "Use `abstract`/`final` intentionally.",
+      "Prefer composition when inheritance is awkward."
+    ]
+  },
+  "u16-interface": {
+    "details": [
+      "Interfaces define a contract: method signatures without implementation.",
+      "A class uses `implements` to promise it provides those methods.",
+      "Interfaces enable polymorphism (swap implementations without changing callers).",
+      "A class can implement multiple interfaces.",
+      "Type-hint interfaces in function params to keep code flexible."
+    ],
+    "summary": [
+      "Interfaces define contracts.",
+      "Classes `implements` interfaces.",
+      "Type-hint interfaces for flexibility.",
+      "One class can implement multiple interfaces."
+    ]
+  },
+  "u17-traits": {
+    "details": [
+      "Traits are a mechanism for horizontal code reuse across unrelated classes.",
+      "Include a trait with `use TraitName;` inside a class.",
+      "Resolve naming conflicts using `insteadof` and rename methods using `as`.",
+      "Use traits for small, focused behavior (logging helpers, timestamps).",
+      "Avoid turning traits into large grab-bags; keep them cohesive."
+    ],
+    "summary": [
+      "Traits reuse methods across classes.",
+      "Use `use TraitName;` in a class.",
+      "Resolve conflicts with `insteadof` / `as`.",
+      "Keep traits small and focused."
+    ]
+  },
+  "u18-namespaces": {
+    "details": [
+      "Namespaces prevent name collisions across large codebases.",
+      "Declare a namespace at the top of the file: `namespace App;`.",
+      "Import classes/functions with `use` statements.",
+      "Use fully qualified names when needed (`\\App\\User`).",
+      "Namespaces work best together with PSR-4 autoloading via Composer."
+    ],
+    "summary": [
+      "Namespaces organize code and avoid collisions.",
+      "Declare with `namespace ...;`.",
+      "Import with `use`.",
+      "Pair with PSR-4 autoloading."
+    ]
+  },
+  "u19-composer": {
+    "details": [
+      "`composer.json` declares dependencies under `require` and `require-dev`.",
+      "`composer install` installs versions pinned in `composer.lock`.",
+      "`composer update` updates dependencies and rewrites `composer.lock`.",
+      "Libraries are installed into the `vendor/` directory.",
+      "You typically include `vendor/autoload.php` to enable autoloading."
+    ],
+    "summary": [
+      "Composer manages PHP dependencies.",
+      "`composer install` uses `composer.lock`.",
+      "`composer update` changes locked versions.",
+      "Use `vendor/autoload.php` for autoloading."
+    ]
+  },
+  "u20-autoload": {
+    "details": [
+      "Autoloading loads classes automatically when they are referenced.",
+      "PSR-4 maps namespaces to directories (configured in `composer.json`).",
+      "Run `composer dump-autoload` after changing autoload rules.",
+      "Always commit `composer.lock` for consistent installs across environments.",
+      "For production, consider optimized autoload (`--optimize-autoloader`)."
+    ],
+    "summary": [
+      "PSR-4 maps namespaces to folders.",
+      "Composer generates the autoloader.",
+      "Use `composer dump-autoload` after changes.",
+      "Use optimized autoloading for production."
+    ]
+  },
+  "u21-exceptions": {
+    "details": [
+      "Exceptions represent error conditions that should be handled explicitly.",
+      "Throw with `throw new Exception('message');` (or a more specific exception type).",
+      "Handle with `try { ... } catch (Exception $e) { ... } finally { ... }`.",
+      "Catch the most specific exception types first.",
+      "Do not swallow exceptions silently; log or return meaningful errors."
+    ],
+    "summary": [
+      "Throw exceptions for errors.",
+      "Handle errors with try/catch/finally.",
+      "Catch specific exception types first.",
+      "Log or surface meaningful messages."
+    ]
+  },
+  "u22-files": {
+    "details": [
+      "Read files with `file_get_contents()` and write files with `file_put_contents()`.",
+      "Use `fopen/fgets/fwrite` for streaming large files.",
+      "Always handle failure cases (missing file, permission errors).",
+      "Build safe paths with `__DIR__` and avoid user-controlled path concatenation.",
+      "When accepting filenames from users, validate and restrict to allowed directories."
+    ],
+    "summary": [
+      "Use `file_get_contents` / `file_put_contents` for simple I/O.",
+      "Stream large files with `fopen`.",
+      "Handle errors and permissions.",
+      "Use safe, validated paths."
+    ]
+  },
+  "u23-datetime": {
+    "details": [
+      "Use `DateTime` or `DateTimeImmutable` instead of manually parsing timestamps.",
+      "Always be explicit about time zones (`new DateTime('now', new DateTimeZone('UTC'))`).",
+      "Format output with `$dt->format('Y-m-d H:i:s')`.",
+      "Compute differences using `$a->diff($b)` (returns a `DateInterval`).",
+      "Store timestamps in UTC and convert for display at the edges."
+    ],
+    "summary": [
+      "Prefer `DateTime`/`DateTimeImmutable`.",
+      "Be explicit about time zones.",
+      "Format with `format()`.",
+      "Store times in UTC when possible."
+    ]
+  },
+  "u24-json": {
+    "details": [
+      "`json_encode()` converts arrays/objects into JSON strings.",
+      "`json_decode()` parses JSON; pass `true` to get associative arrays.",
+      "Check encoding/decoding errors with `json_last_error()` and `json_last_error_msg()`.",
+      "Use `JSON_UNESCAPED_UNICODE` and `JSON_PRETTY_PRINT` during development if helpful.",
+      "Validate incoming JSON structure before trusting it."
+    ],
+    "summary": [
+      "Encode with `json_encode` and decode with `json_decode`.",
+      "Use associative mode (`true`) if you want arrays.",
+      "Check errors with `json_last_error_msg()`.",
+      "Validate JSON structure before using it."
+    ]
+  },
+  "u25-http": {
+    "details": [
+      "HTTP is request/response: method + URL + headers + body.",
+      "Read request info from `$_SERVER` (method, path, headers).",
+      "Set headers with `header('Name: value')` before output.",
+      "Redirect with `header('Location: /path', true, 302); exit;`.",
+      "Use meaningful status codes (200 OK, 400 Bad Request, 401 Unauthorized, 404 Not Found, 500 Server Error)."
+    ],
+    "summary": [
+      "HTTP requests include method, headers, and body.",
+      "Read method from `$_SERVER['REQUEST_METHOD']`.",
+      "Set headers before output.",
+      "Use correct status codes and redirects."
+    ]
+  },
+  "u26-pdo": {
+    "details": [
+      "PDO is a database abstraction layer that supports multiple drivers.",
+      "Use prepared statements (`prepare` + `execute`) to prevent SQL injection.",
+      "Enable exceptions with `PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION`.",
+      "Use transactions for multi-step operations (`beginTransaction/commit/rollBack`).",
+      "Choose fetch modes (`FETCH_ASSOC`) for predictable data structures."
+    ],
+    "summary": [
+      "PDO is a generic DB API.",
+      "Use prepared statements for safety.",
+      "Enable exception error mode.",
+      "Use transactions for multi-step writes."
+    ]
+  },
+  "u27-mysqli": {
+    "details": [
+      "MySQLi is a MySQL-specific API (procedural or object-oriented style).",
+      "It supports prepared statements similar to PDO.",
+      "If you only target MySQL, MySQLi is fine; for portability, prefer PDO.",
+      "Always handle connection errors and query errors explicitly.",
+      "Avoid building SQL with string concatenation; bind parameters instead."
+    ],
+    "summary": [
+      "MySQLi is MySQL-only.",
+      "Use prepared statements and parameter binding.",
+      "Handle connection/query errors.",
+      "Prefer PDO if you need portability."
+    ]
+  },
+  "u28-curl": {
+    "details": [
+      "cURL lets PHP make HTTP requests to other services.",
+      "Typical flow: `curl_init`, `curl_setopt`, `curl_exec`, `curl_close`.",
+      "Set headers, timeouts, and HTTP method via options.",
+      "Check errors using `curl_errno` and `curl_error`.",
+      "Do not disable SSL verification in production; fix certificates instead."
+    ],
+    "summary": [
+      "Use `curl_init` + `curl_setopt` + `curl_exec`.",
+      "Set timeouts and headers explicitly.",
+      "Handle errors with `curl_error()`.",
+      "Keep SSL verification enabled in production."
+    ]
+  },
+  "u29-regex": {
+    "details": [
+      "Regex is useful for matching and transforming text patterns.",
+      "Use `preg_match` to test/collect matches and `preg_replace` to replace patterns.",
+      "Patterns use delimiters (commonly `/.../`) and can include flags like `i` (case-insensitive).",
+      "Capture groups with parentheses and reference them in replacements if needed.",
+      "Prefer simpler string functions when possible; regex can become hard to maintain."
+    ],
+    "summary": [
+      "`preg_match` finds matches.",
+      "`preg_replace` replaces matches.",
+      "Learn delimiters, flags, and capture groups.",
+      "Avoid overly complex regex when simpler code works."
+    ]
+  },
+  "u30-security": {
+    "details": [
+      "Common web risks: SQL injection, XSS, CSRF, and insecure password storage.",
+      "Use prepared statements (PDO/MySQLi) for database queries.",
+      "Escape output with `htmlspecialchars` when rendering untrusted data into HTML.",
+      "Hash passwords using `password_hash` and verify with `password_verify`.",
+      "Use least privilege: DB users should have only the permissions they need."
+    ],
+    "summary": [
+      "Use prepared statements to prevent SQL injection.",
+      "Escape output to prevent XSS.",
+      "Use `password_hash()` / `password_verify()` for passwords.",
+      "Apply least-privilege permissions."
+    ]
+  },
+  "u31-uploads": {
+    "details": [
+      "Uploads arrive via `$_FILES` when a form uses `enctype='multipart/form-data'`.",
+      "Always validate file size, extension, and MIME type (server-side).",
+      "Move files with `move_uploaded_file()` to a safe location.",
+      "Store uploads outside the web root when possible and serve them through controlled routes.",
+      "Generate unique filenames to avoid overwriting and path traversal issues."
+    ],
+    "summary": [
+      "Uploads come via `$_FILES`.",
+      "Validate size/type server-side.",
+      "Use `move_uploaded_file()`.",
+      "Store safely (unique names, outside web root when possible)."
+    ]
+  },
+  "u32-mail": {
+    "details": [
+      "`mail()` exists but is often unreliable and hard to configure across servers.",
+      "Prefer an SMTP library like PHPMailer or Symfony Mailer for real apps.",
+      "Use proper From/Reply-To headers and avoid user-controlled header values.",
+      "Send both HTML and plain-text versions when possible.",
+      "Log delivery failures and retry where appropriate."
+    ],
+    "summary": [
+      "Prefer SMTP libraries over `mail()`.",
+      "Avoid header injection (validate inputs).",
+      "Send HTML + text when possible.",
+      "Log failures and handle retries."
+    ]
+  },
+  "u33-testing": {
+    "details": [
+      "PHPUnit is the standard unit testing framework for PHP.",
+      "Tests are regular PHP classes with methods that contain assertions.",
+      "Follow Arrange → Act → Assert for readable tests.",
+      "Keep tests fast; mock slow dependencies (network, database) when needed.",
+      "Run tests frequently and integrate into CI for reliability."
+    ],
+    "summary": [
+      "Use PHPUnit for testing.",
+      "Write assertions to verify behavior.",
+      "Keep tests readable and fast.",
+      "Automate tests in CI."
+    ]
+  },
+  "u34-frameworks": {
+    "details": [
+      "Frameworks (Laravel, Symfony) provide routing, controllers, templating, and tooling.",
+      "Most PHP frameworks follow MVC to separate concerns.",
+      "They include dependency injection and configuration via environment variables.",
+      "Use frameworks for larger apps to avoid reinventing authentication, routing, validation, etc.",
+      "Understand the fundamentals first; frameworks build on core PHP concepts."
+    ],
+    "summary": [
+      "Laravel and Symfony are popular frameworks.",
+      "Frameworks commonly use MVC and dependency injection.",
+      "They speed up development for real apps.",
+      "Core PHP fundamentals still matter."
+    ]
+  },
+  "u35-apis": {
+    "details": [
+      "REST APIs model resources (nouns) and use HTTP verbs (GET, POST, PUT/PATCH, DELETE).",
+      "Return consistent JSON responses and meaningful HTTP status codes.",
+      "Validate requests strictly and return clear error messages.",
+      "Use authentication (tokens/sessions) and enforce authorization checks per endpoint.",
+      "Document endpoints and version your API when making breaking changes."
+    ],
+    "summary": [
+      "Use HTTP verbs to act on resources.",
+      "Return JSON + correct status codes.",
+      "Validate input and handle errors cleanly.",
+      "Secure endpoints with auth + authorization."
+    ]
+  }
+}
+

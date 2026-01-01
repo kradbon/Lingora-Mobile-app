@@ -1,0 +1,457 @@
+{
+  "u01-intro": {
+    "details": [
+      "You can run a local dev server with `php -S localhost:8000`.",
+      "In pure PHP files, the closing `?>` tag is optional and often omitted.",
+      "Use `phpinfo()` to inspect your PHP environment (remove it after).",
+      "PHP can return HTML pages or JSON for APIs.",
+      "Use `var_dump()` while learning to see types and values."
+    ],
+    "summary": [
+      "Run a dev server with `php -S`.",
+      "PHP can return HTML or JSON."
+    ]
+  },
+  "u02-syntax": {
+    "details": [
+      "Use comments: `//`, `#`, and `/* ... */`.",
+      "Variables are case-sensitive (`$name` is different from `$Name`).",
+      "Modern PHP can use `declare(strict_types=1)` for stricter typing per file.",
+      "Prefer `===` over `==` to avoid surprising type coercion.",
+      "Use constants (`const`, `define`) for fixed values."
+    ],
+    "summary": [
+      "Variables are case-sensitive.",
+      "Prefer `===` for reliable comparisons."
+    ]
+  },
+  "u03-strings": {
+    "details": [
+      "Use `sprintf()` for formatted strings instead of manual concatenation.",
+      "Heredoc/nowdoc are useful for multi-line strings.",
+      "Use `trim()` to remove leading/trailing whitespace.",
+      "Escape HTML output with `htmlspecialchars()` when rendering user input.",
+      "Use `mb_*` functions for multibyte text when needed."
+    ],
+    "summary": [
+      "Use `sprintf()` for formatting.",
+      "Escape output when rendering user input."
+    ]
+  },
+  "u04-arrays": {
+    "details": [
+      "Append to an array with `$arr[] = $value`.",
+      "Associative arrays are great for structured records (like a user object).",
+      "Use `array_map()`/`array_filter()` for transformations.",
+      "Use `sort()` vs `asort()`/`ksort()` depending on whether you want to keep keys.",
+      "Use `array_key_exists()` when a key may exist with a `null` value."
+    ],
+    "summary": [
+      "Arrays are ordered maps (keys can be ints or strings).",
+      "Use map/filter helpers to transform data."
+    ]
+  },
+  "u05-control": {
+    "details": [
+      "`switch` uses loose comparisons; be careful with strings vs numbers.",
+      "Use `??` to provide defaults when a value is null.",
+      "`match` (PHP 8+) is strict and returns a value.",
+      "Ternary `?:` helps for quick decisions, but avoid nesting.",
+      "Short-circuit logic means later conditions may not run."
+    ],
+    "summary": [
+      "Keep conditions readable (extract booleans).",
+      "Use `match` for strict value mapping."
+    ]
+  },
+  "u06-loops": {
+    "details": [
+      "Use `foreach ($arr as $key => $value)` when you need keys.",
+      "Use `break` and `continue` to control loop flow.",
+      "Avoid modifying arrays while iterating unless you know the behavior.",
+      "Use `range()` to generate simple numeric sequences.",
+      "Keep loop bodies small; extract functions for complex work."
+    ],
+    "summary": [
+      "Use `break`/`continue` to control flow.",
+      "Avoid infinite loops by ensuring the condition changes."
+    ]
+  },
+  "u07-funcs": {
+    "details": [
+      "Default arguments make optional parameters easy to support.",
+      "Return early to reduce nesting and keep functions readable.",
+      "Variadic parameters use `...$args` for flexible APIs.",
+      "Type hints and return types help catch bugs early.",
+      "Anonymous and arrow functions are useful for callbacks."
+    ],
+    "summary": [
+      "Use types and defaults for clarity.",
+      "Use `...$args` for variadic parameters."
+    ]
+  },
+  "u08-scope": {
+    "details": [
+      "Avoid global state; pass dependencies into functions/classes.",
+      "`static` preserves values between calls (use sparingly).",
+      "Closures capture variables with `use ($x)`.",
+      "Superglobals (`$_GET`, `$_POST`, `$_SERVER`) are accessible anywhere.",
+      "Prefer pure functions for easier testing."
+    ],
+    "summary": [
+      "Prefer passing values over globals.",
+      "Use `static` and closure capture carefully."
+    ]
+  },
+  "u09-include": {
+    "details": [
+      "`require_once` helps avoid double-inclusion issues.",
+      "Use `__DIR__` to avoid relative path problems.",
+      "Prefer Composer autoload (`vendor/autoload.php`) for classes.",
+      "Do not include files based on user input.",
+      "Keep project structure consistent (one class per file)."
+    ],
+    "summary": [
+      "Prefer Composer autoloading in modern projects.",
+      "Avoid dynamic includes from untrusted input."
+    ]
+  },
+  "u10-forms": {
+    "details": [
+      "Use `filter_input()` and `filter_var()` for validation.",
+      "Escape values when re-rendering a form to avoid XSS.",
+      "Use CSRF tokens for state-changing actions.",
+      "Prefer POST for modifications and GET for safe reads.",
+      "Validate required fields and show clear error messages."
+    ],
+    "summary": [
+      "Validate and sanitize input.",
+      "Use CSRF protection and output escaping."
+    ]
+  },
+  "u11-sessions": {
+    "details": [
+      "Do not store large objects in sessions; store IDs and small flags.",
+      "Use timeouts/idle expiration for better security.",
+      "Use HTTPS so session cookies are protected in transit.",
+      "On logout, clear session data and call `session_destroy()`.",
+      "Avoid sharing session cookies across unrelated apps/domains."
+    ],
+    "summary": [
+      "Use HTTPS and secure cookie flags for sessions.",
+      "Destroy the session on logout."
+    ]
+  },
+  "u12-cookies": {
+    "details": [
+      "Cookies are sent with every request that matches their path/domain scope.",
+      "Cookie size is limited; keep values small.",
+      "Signed/encrypted cookies still require server-side verification.",
+      "Use a short lifetime for sensitive cookies.",
+      "Prefer sessions for authentication state."
+    ],
+    "summary": [
+      "Cookies are sent automatically with matching requests.",
+      "Use opaque IDs; do not store secrets in cookies."
+    ]
+  },
+  "u13-oop": {
+    "details": [
+      "Use typed properties and return types for clarity.",
+      "Prefer composition when inheritance does not fit.",
+      "Keep classes small; avoid god objects.",
+      "Use interfaces to depend on behavior rather than implementations.",
+      "Use namespaces to organize larger applications."
+    ],
+    "summary": [
+      "Use interfaces and namespaces to scale OOP code.",
+      "Prefer composition over inheritance when appropriate."
+    ]
+  },
+  "u14-construct": {
+    "details": [
+      "PHP 8+ supports constructor property promotion to reduce boilerplate.",
+      "Avoid heavy work (network calls) in constructors.",
+      "Use defaults for optional dependencies when sensible.",
+      "Throw exceptions if required inputs are invalid.",
+      "Keep constructors simple; use factories for complex setup."
+    ],
+    "summary": [
+      "Property promotion reduces boilerplate.",
+      "Avoid heavy side effects in constructors."
+    ]
+  },
+  "u15-inherit": {
+    "details": [
+      "Keep inheritance hierarchies shallow (avoid deep chains).",
+      "Use `protected` for members intended for subclasses.",
+      "Follow Liskov Substitution: child should work wherever parent is expected.",
+      "Use interfaces when you need multiple behaviors.",
+      "Prefer composition for reuse when inheritance becomes awkward."
+    ],
+    "summary": [
+      "Keep hierarchies shallow.",
+      "Follow Liskov Substitution principles."
+    ]
+  },
+  "u16-interface": {
+    "details": [
+      "Interfaces make unit testing easier (mock the interface).",
+      "Keep interfaces small and focused (single responsibility).",
+      "Use return types to make contracts explicit.",
+      "Use interfaces for capabilities (Cache, Logger, Mailer).",
+      "Interfaces work well with dependency injection."
+    ],
+    "summary": [
+      "Interfaces help testing and mocking.",
+      "Keep interfaces small and focused."
+    ]
+  },
+  "u17-traits": {
+    "details": [
+      "Traits can include properties as well as methods.",
+      "Document what a trait requires (methods/properties).",
+      "A class can use multiple traits.",
+      "Avoid hidden dependencies inside traits.",
+      "Prefer services/composition for complex shared behavior."
+    ],
+    "summary": [
+      "Traits can reduce duplication for small behaviors.",
+      "Use composition for complex reuse."
+    ]
+  },
+  "u18-namespaces": {
+    "details": [
+      "Alias imports when names collide: `use Foo\\Bar as Baz;`.",
+      "Keep one class per file for predictable autoloading.",
+      "Match namespace prefixes to folder structure (PSR-4).",
+      "Avoid putting executable code in class files.",
+      "Use `\\DateTime` to reference global classes when needed."
+    ],
+    "summary": [
+      "Use aliases to avoid name collisions.",
+      "Keep namespaces aligned with folders."
+    ]
+  },
+  "u19-composer": {
+    "details": [
+      "`composer.lock` ensures repeatable installs across machines.",
+      "Use `require-dev` for dev tools like PHPUnit and linters.",
+      "Avoid committing `vendor/` in most projects.",
+      "Composer scripts can run tools like tests and formatters.",
+      "Keep dependencies updated for security fixes."
+    ],
+    "summary": [
+      "`composer.lock` makes installs repeatable.",
+      "Update dependencies to receive security fixes."
+    ]
+  },
+  "u20-autoload": {
+    "details": [
+      "PSR-4 maps a namespace prefix to a directory.",
+      "Keep one class per file for predictable autoloading.",
+      "Regenerate autoload files with `composer dump-autoload` when needed.",
+      "If a class is not found, check the namespace and file path first.",
+      "Avoid mixing manual `require` with Composer autoload."
+    ],
+    "summary": [
+      "Namespaces and folders must match for PSR-4.",
+      "Use `composer dump-autoload` when class maps change."
+    ]
+  },
+  "u21-exceptions": {
+    "details": [
+      "PHP 7+ uses `Throwable` as the base for errors and exceptions.",
+      "Create custom exceptions to represent domain-specific failures.",
+      "Catch the most specific exception types first.",
+      "Log exceptions with context, but avoid logging secrets.",
+      "Do not swallow exceptions silently; rethrow when appropriate."
+    ],
+    "summary": [
+      "Catch specific exceptions when possible.",
+      "Log or rethrow; do not hide failures."
+    ]
+  },
+  "u22-files": {
+    "details": [
+      "Use `file_put_contents()` for simple writes and streams for large files.",
+      "Lock files when multiple processes might write (`LOCK_EX` or `flock`).",
+      "Validate user-provided paths to prevent path traversal attacks.",
+      "Use `realpath()` to resolve and validate file locations.",
+      "Close file handles to avoid resource leaks."
+    ],
+    "summary": [
+      "Use stable paths and handle permissions safely.",
+      "Validate paths; do not trust user input for filenames."
+    ]
+  },
+  "u23-datetime": {
+    "details": [
+      "Set timezones explicitly to avoid surprises.",
+      "Consider `DateTimeImmutable` for safer immutable date handling.",
+      "Use `DateInterval` for adding/subtracting time.",
+      "Use `diff()` to compare two dates.",
+      "Store dates consistently (often UTC) and convert only for display."
+    ],
+    "summary": [
+      "Set timezones explicitly.",
+      "Prefer consistent storage (often UTC)."
+    ]
+  },
+  "u24-json": {
+    "details": [
+      "Use `json_decode($json, true)` to get associative arrays.",
+      "Use `JSON_THROW_ON_ERROR` to avoid silent failures (PHP 7.3+).",
+      "Validate expected fields and types after decoding.",
+      "Avoid leaking secrets in JSON responses.",
+      "Use `Content-Type: application/json` for API responses."
+    ],
+    "summary": [
+      "Handle JSON errors explicitly.",
+      "Validate decoded data before using it."
+    ]
+  },
+  "u25-http": {
+    "details": [
+      "Use `http_response_code()` to send correct status codes.",
+      "Set `Content-Type` headers to match your response format.",
+      "Understand common status codes (200, 201, 204, 400, 401, 404, 500).",
+      "Redirect with `Location` header and a 3xx code.",
+      "Separate routing from rendering for cleaner design."
+    ],
+    "summary": [
+      "Set headers and status codes intentionally.",
+      "Structure apps with routing and handlers."
+    ]
+  },
+  "u26-pdo": {
+    "details": [
+      "Enable exception mode with `PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION`.",
+      "Prefer prepared statements over string concatenation.",
+      "Use named placeholders (`:email`) for readability.",
+      "Pick a fetch mode like `PDO::FETCH_ASSOC` for clean arrays.",
+      "Wrap multi-step writes in transactions."
+    ],
+    "summary": [
+      "Use prepared statements and exception mode.",
+      "Use transactions for multi-step changes."
+    ]
+  },
+  "u27-mysqli": {
+    "details": [
+      "Use prepared statements and `bind_param()` to avoid SQL injection.",
+      "Use `utf8mb4` for full Unicode support.",
+      "Always check connection and statement errors.",
+      "Avoid deprecated `mysql_*` APIs (removed from PHP).",
+      "Prefer PDO if you want portability across databases."
+    ],
+    "summary": [
+      "Use prepared statements in MySQLi.",
+      "Prefer PDO for portability."
+    ]
+  },
+  "u28-curl": {
+    "details": [
+      "Always set timeouts to prevent hanging requests.",
+      "Check HTTP status codes with `curl_getinfo()`.",
+      "Handle errors with `curl_error()` and `curl_errno()`.",
+      "Set request headers (like Authorization) when calling APIs.",
+      "Validate and parse JSON responses safely."
+    ],
+    "summary": [
+      "Set timeouts and handle errors.",
+      "Check status codes and validate responses."
+    ]
+  },
+  "u29-regex": {
+    "details": [
+      "Use anchors (`^` and `$`) when validating whole strings.",
+      "Keep patterns simple to avoid performance issues.",
+      "Prefer `strpos`/`str_replace` when regex is overkill.",
+      "Test patterns against edge cases.",
+      "Escape special characters when building patterns from input."
+    ],
+    "summary": [
+      "Use regex carefully; keep patterns simple.",
+      "Prefer simple string functions when possible."
+    ]
+  },
+  "u30-security": {
+    "details": [
+      "Use CSRF tokens for state-changing web forms.",
+      "Set session/cookie flags: HttpOnly, Secure, SameSite.",
+      "Never store plaintext passwords; hash with `password_hash()`.",
+      "Use least privilege for DB users and file permissions.",
+      "Keep dependencies updated and patch quickly."
+    ],
+    "summary": [
+      "Security is layers: validation, escaping, hashing, and safe defaults.",
+      "Keep deps and runtime updated."
+    ]
+  },
+  "u31-uploads": {
+    "details": [
+      "Check `UPLOAD_ERR_*` codes before using an uploaded file.",
+      "Validate max size server-side, not just in the browser.",
+      "Use allow-lists for extensions and MIME types.",
+      "Rename files to safe random names (do not trust original names).",
+      "Store uploads outside the web root when possible."
+    ],
+    "summary": [
+      "Validate uploads strictly (size/type/name).",
+      "Store uploads safely and never execute them."
+    ]
+  },
+  "u32-mail": {
+    "details": [
+      "Avoid header injection by validating any user-provided email fields.",
+      "Use domain email settings (SPF/DKIM/DMARC) for deliverability.",
+      "Queue emails for better performance at scale.",
+      "Log failures and consider retries for transient errors.",
+      "Rate limit sending to prevent abuse."
+    ],
+    "summary": [
+      "Prefer SMTP libraries and validate inputs.",
+      "Queue and monitor email sending in real apps."
+    ]
+  },
+  "u33-testing": {
+    "details": [
+      "Use `assertSame()` when type matters; it is stricter than `assertEquals()`.",
+      "Mock external dependencies (DB, HTTP) in unit tests.",
+      "Keep unit tests independent (no shared state between tests).",
+      "Use CI to run tests on every commit/PR.",
+      "Write integration tests separately for real DB/API behavior."
+    ],
+    "summary": [
+      "Use strict assertions and isolate unit tests.",
+      "Run tests automatically in CI."
+    ]
+  },
+  "u34-frameworks": {
+    "details": [
+      "Frameworks provide routing, middleware, controllers, and templating.",
+      "They often include DI containers and configuration systems.",
+      "ORMs and migrations simplify database work.",
+      "Follow framework conventions to move faster.",
+      "Knowing core PHP helps you debug framework issues."
+    ],
+    "summary": [
+      "Frameworks speed up development with conventions and tooling.",
+      "Learn core PHP first for effective debugging."
+    ]
+  },
+  "u35-apis": {
+    "details": [
+      "Use correct status codes (201 for created, 204 for no content).",
+      "Validate and sanitize all incoming data.",
+      "Use authentication and authorization for protected resources.",
+      "Document endpoints, parameters, and response shapes.",
+      "Use pagination for list endpoints."
+    ],
+    "summary": [
+      "APIs should use JSON + status codes + validation.",
+      "Add auth, docs, and pagination for real apps."
+    ]
+  }
+}
